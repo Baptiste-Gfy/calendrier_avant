@@ -8,38 +8,56 @@ h1 {
     display:none;
 }
 
-li{
+.jour-on-desktop{
+    display:none;
+}
+.jour-on-mobile{
     display:flex;
     flex-direction:column;
-    align-content:center;
+    box-sizing: border-box;
     text-align:center;
-    padding:30px;
+    padding:20px 0;
     margin:4vw 5vw;
     border-radius: 5px;
     color: white;
     background-color: #FBA6A6;
     width: auto;
+    transition:all 0.2s ease-in-out;
+    font-size: 16;
+    cursor:pointer;
     box-shadow:2px 6px 12px #aaa;
-    font: size 18;
+}
+.jour-on-mobile:active{
+    box-shadow: 0 0 0;
 }
 
-.jour-off{
+
+.jour-off-desktop{
+    display:none;
+}
+.jour-off-mobile{
     display:flex;
     flex-direction:column;
-    align-content:center;
+    box-sizing:border-box;
     text-align:center;
-    padding:30px;
+    padding:20px 0;
     margin: 4vw 5vw;
     border-radius: 5px;
     color: white;
     background-color: #C4C4C4;
     width: auto;
-    font: size 18;
+    font-size: 16;
+    transition:all 0.2s ease-in-out;
+    box-shadow:2px 6px 12px #aaa;
 }
+.jour-off-mobile:active{
+    box-shadow: 0 0 0;
+}
+
 
 @media screen and (min-width: 768px) {
     body{
-        margin: 3vw;
+        
         background-image:url(../asset/sapin_crop.png) ;
         background-position:bottom right;
         background-attachment: fixed;
@@ -50,41 +68,82 @@ li{
         display:block;
         text-align:center;
         box-sizing:border-box;
-        m
+        margin-top: 10vh;
     
     }
+    .jour-on-mobile{
+        display:none;
+    }
+    .jour-off-mobile{
+        display:none;
+    }
 
-    .semaine, .jour{
+    .semaine, .jour-desktop{
         display:grid;
         grid-template-columns: repeat(7,1fr);
         column-gap: 1vw;
         row-gap: 1vw;
+        list-style: none;
+        text-align:center;
     }
 
-    .jour li:first-child{
+    .jour-desktop li:first-child{
         grid-column:2;
     }
     
-    li{
+    .jour-on-desktop{
+        display:block;
         margin:0;
-        box-sizing: border-box;    
+        box-sizing: border-box;
+        cursor:pointer;
+        list-style: none;
+        background-color: #FBA6A6;
+        color:white;
+        border-radius: 5px;   
     }
-    .jour-off{
+    .jour-on-desktop:hover{
+        box-shadow:2px 6px 12px #aaa;
+    }
+    .jour-on-desktop:active{
+        box-shadow: 0 0 0;
+    }
+
+    .jour-off-desktop{
+        display:block;
         margin:0;
+        box-sizing: border-box;
+        cursor:pointer;
+        list-style: none;
+        background-color: #C4C4C4;
+        color:white;
+        border-radius: 5px;
     }
-    .jour{
+    
+    }
+    .jour-off-desktop:hover{
+        box-shadow:2px 6px 12px #aaa;
+    }
+    .jour-off-desktop:active{
+        box-shadow: 0 0 0;
+    }
+
+    .jour-desktop{
         margin:0;
         padding:0;
     }
+
     .semaine{
         padding:0
     }
+
     .jour-semaine{
         box-shadow:none;
         background-color:transparent;
         color: black;
     }
-    
+    .calendrier{
+        margin:2vw;
+    }
     
 
 

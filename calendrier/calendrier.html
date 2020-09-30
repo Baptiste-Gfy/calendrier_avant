@@ -3,67 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="calendrier.css">
     <title>Calendrier</title>
 </head>
 <body>
+    <header class="main-header">
+        <h1 class="main-title"><a class="nav-link" href="#">En attendant noël</a></h1>
+        <div class="burger">
+            <span class="slice-burger"></span>
+            <span class="slice-burger"></span>
+            <span class="slice-burger"></span>
+            <span class="slice-burger"></span>
+        </div>
+        <nav class="main-nav-mobile">
+            <ul class="content-items-nav-mobile">
+                <li class="items-nav-mobile"><a class="nav-link" href="#">Inscription</a></li>
+                <li class="items-nav-mobile"><a class="nav-link" href="#">Calendrier</a></li>
+                <li class="items-nav-mobile"><a class="nav-link" href="#">Contactez-nous</a></li>
+            </ul>
+        </nav>
+        <nav class="main-nav-desktop">
+            <ul class="content-items-nav-desktop">
+                <li class="items-nav-desktop"><a href="#" class="nav-link">Inscription</a></li>
+                <li class="items-nav-desktop"><a href="#" class="nav-link">Calendrier</a></li>
+                <li class="items-nav-desktop"><a href="#" class="nav-link">Contactez-nous</a></li>
+            </ul>
+        </nav>
+    </header>
     <h1>Calendrier</h1>
-    <header> <!-- TODO !--> </header>
     
+    <section class="calendrier">
     <section>
         <ul class="semaine">
-            <li class="jour-semaine">Lundi</li>
-            <li class="jour-semaine">Mardi</li>
-            <li class="jour-semaine">Mercredi</li>
-            <li class="jour-semaine">Jeudi</li>
-            <li class="jour-semaine">Vendredi</li>
-            <li class="jour-semaine">Samedi</li>
-            <li class="jour-semaine">Dimanche</li>
+            <li class="jour-semaine"><p>Lundi</p></li>
+            <li class="jour-semaine"><p>Mardi</p></li>
+            <li class="jour-semaine"><p>Mercredi</p></li>
+            <li class="jour-semaine"><p>Jeudi</p></li>
+            <li class="jour-semaine"><p>Vendredi</p></li>
+            <li class="jour-semaine"><p>Samedi</p></li>
+            <li class="jour-semaine"><p>Dimanche</p></li>
         </ul>
     </section>
 
     <section>
-        <ul class="jour"> 
-            <li>1 décembre</li>
-            <li>2 décembre</li>
-            <li>3 décembre</li>
-            <li>4 décembre</li>
+        <ul class="jour-mobile"> 
+            <li class="jour-on-mobile"><p>1 décembre</p></li>
+            <li class="jour-on-mobile"><p>2 décembre</p></li>
+            <li class="jour-on-mobile"><p>3 décembre</p></li>
+            <li class="jour-on-mobile"><p>4 décembre</p></li>
+            
 
-            <li class="jour-off">5 décembre</li>
-            <li class="jour-off">6 décembre</li>
+            <li class="jour-off-mobile"><p>5 décembre</p></li>
+            <li class="jour-off-mobile"><p>6 décembre</p></li>
+            
         
-            <li>7 décembre</li>
-            <li>8 décembre</li>
-            <li>9 décembre</li>
-            <li>10 décembre</li>
-            <li>11 décembre</li>
+            <li class="jour-on-mobile"><p>7 décembre</p></li>
+            <li class="jour-on-mobile"><p>8 décembre</p></li>
+            <li class="jour-on-mobile"><p>9 décembre</p></li>
+            <li class="jour-on-mobile"><p>10 décembre</p></li>
+            <li class="jour-on-mobile"><p>11 décembre</p></li>
         
-            <li class="jour-off">12 décembre</li>
-            <li class="jour-off">13 décembre</li>
-        
-        
-            <li>14 décembre</li>
-            <li>15 décembre</li>
-            <li>16 décembre</li>
-            <li>17 décembre</li>
-            <li>18 décembre</li>
+            <li class="jour-off-mobile"><p>12 décembre</p></li>
+            <li class="jour-off-mobile"><p>13 décembre</p></li>
         
         
-            <li class="jour-off">19 décembre</li>
-            <li class="jour-off">20 décembre</li>
+            <li class="jour-on-mobile"><p>14 décembre</p></li>
+            <li class="jour-on-mobile"><p>15 décembre</p></li>
+            <li class="jour-on-mobile"><p>16 décembre</p></li>
+            <li class="jour-on-mobile"><p>17 décembre</p></li>
+            <li class="jour-on-mobile"><p>18 décembre</p></li>
         
         
-            <li>21 décembre</li>
-            <li>22 décembre</li>
-            <li>23 décembre</li>
-            <li>24 décembre</li>
+            <li class="jour-off-mobile"><p>19 décembre</p></li>
+            <li class="jour-off-mobile"><p>20 décembre</p></li>
+        
+        
+            <li class="jour-on-mobile"><p>21 décembre</p></li>
+            <li class="jour-on-mobile"><p>22 décembre</p></li>
+            <li class="jour-on-mobile"><p>23 décembre</p></li>
+            <li class="jour-on-mobile"><p>24 décembre</p></li>
         </ul>
     </section>
-   
+    <section>
+        <ul class="jour-desktop"> 
+            <li class="jour-on-desktop"><p>1 décembre</p></li>
+            <li class="jour-on-desktop"><p>2 décembre</p></li>
+            <li class="jour-on-desktop"><p>3 décembre</p></li>
+            <li class="jour-on-desktop"><p>4 décembre</p></li>
+            
 
-
-
-
-    <footer> <!--TODO !--></footer>
+            <li class="jour-off-desktop"><p>5 décembre</p></li>
+            <li class="jour-off-desktop"><p>6 décembre</p></li>
+            
+        
+            <li class="jour-on-desktop"><p>7 décembre</p></li>
+            <li class="jour-on-desktop"><p>8 décembre</p></li>
+            <li class="jour-on-desktop"><p>9 décembre</p></li>
+            <li class="jour-on-desktop"><p>10 décembre</p></li>
+            <li class="jour-on-desktop"><p>11 décembre</p></li>
+        
+            <li class="jour-off-desktop"><p>12 décembre</p></li>
+            <li class="jour-off-desktop"><p>13 décembre</p></li>
+        
+        
+            <li class="jour-on-desktop"><p>14 décembre</p></li>
+            <li class="jour-on-desktop"><p>15 décembre</p></li>
+            <li class="jour-on-desktop"><p>16 décembre</p></li>
+            <li class="jour-on-desktop"><p>17 décembre</p></li>
+            <li class="jour-on-desktop"><p>18 décembre</p></li>
+        
+        
+            <li class="jour-off-desktop"><p>19 décembre</p></li>
+            <li class="jour-off-desktop"><p>20 décembre</p></li>
+        
+        
+            <li class="jour-on-desktop"><p>21 décembre</p></li>
+            <li class="jour-on-desktop"><p>22 décembre</p></li>
+            <li class="jour-on-desktop"><p>23 décembre</p></li>
+            <li class="jour-on-desktop"><p>24 décembre</p></li>
+        </ul>
+    </section>
+    </section>
+    <footer>
+        <ul class="content-items-footer">
+            <li class="items-footer"><a class="nav-link" href="#">Qui sommes-nous ?</a></li>
+            <li class="items-footer"><a class="nav-link" href="#">Contactez-nous</a></li>
+        </ul>
+        <img class="logo-WCS" src="../asset/logo-WSC.png" alt="logo Wild Code School">
+    </footer>
 </body>
 </html>
