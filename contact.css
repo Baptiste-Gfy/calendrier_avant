@@ -1,0 +1,63 @@
+.main-contact {
+  padding: 1em;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+}
+
+.content-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  margin-left: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-photo {
+  border-radius: 5rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.team-description {
+  text-align: center;
+  line-height: 2rem;
+}
+
+.form-contact {
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input {
+  border: none;
+  border-bottom: 0.1rem solid var(--font-dark);
+  transition: all 0.1s linear;
+}
+
+.label-placeholder {
+  position: relative;
+  transform: translate(0, -2.6rem) scale(1);
+  width: max-content;
+  transition: all 0.2s linear;
+}
+
+.input:focus {
+  border-color: skyblue;
+}
+
+.input-name:focus ~ .label-name {
+  transform: translate(-0.3rem, -4rem) scale(0.8);
+}
+
+.form-contact > .btn {
+  align-self: flex-end;
+}
