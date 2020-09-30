@@ -13,6 +13,7 @@
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
+  color: var(--font-dark);
 }
 
 .main-header,
@@ -27,6 +28,7 @@ h4 {
 
 .main-header {
   position: fixed;
+  top: 0;
   width: 100vw;
   color: var(--font-light);
   text-align: center;
@@ -138,9 +140,48 @@ h4 {
   color: var(--font-light);
 }
 
+/* Content=====================================================*/
+.main-content-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.content-message-intro {
+  margin-top: 0;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  max-width: 20rem;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 3rem;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-valid {
+  background-color: var(--valid);
+  color: var(--font-light);
+}
+
+.btn-error {
+  background-color: var(--error);
+  color: var(--font-light);
+}
+
 /* Footer =====================================================*/
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   background-color: var(--background-footer);
   display: flex;
   align-items: center;
@@ -163,7 +204,8 @@ footer {
 }
 
 .logo-WCS {
-  width: 8rem;
+  width: 6rem;
+  margin-right: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -198,6 +240,20 @@ footer {
     width: max-content;
   }
 
+  /* Main =======================================================*/
+
+  .main-content-home {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .btn-valid:hover {
+    box-shadow: 0 5px 6px #383838b0;
+  }
+
+  .btn-valid:active {
+    box-shadow: 0 0 0;
+  }
   /* Footer =====================================================*/
 
   .content-items-footer {
@@ -214,5 +270,12 @@ footer {
     margin-bottom: 0.5rem;
     list-style: none;
     margin-left: 1rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 475px) {
+  .main-content-home {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 }
