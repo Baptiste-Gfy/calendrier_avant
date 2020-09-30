@@ -3,25 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="signUp.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inscription</title>
   </head>
+
   <body>
-    <h1>Inscription</h1>
+    <h1 class="page-title">Inscription</h1>
+
     <form>
-      <ul>
-        <li>
+      <ul class="grp-input">
+        <li class="input-form">
           <label for="name"></label>
           <input type="text" id="name" placeholder="Your name here" />
         </li>
-        <li>
+        <li class="input-form">
           <label for=""></label>
           <input type="text" id="mail" placeholder="Your email here" />
         </li>
-        <li>
-          <label for=""></label>
-          <input type="select" id />
+        <li class="input-form">
+          <select id="campus" name="campus">
+            <option value="">--Choisis ton campus--</option>
+            <optgroup label="France">
+              <option value="Biarritz">Biarritz</option>
+              <option value="Bordeaux">Bordeaux</option>
+              <option value="La Loupe">La Loupe</option>
+              <option value="Lille">Lille</option>
+              <option value="Lyon">Lyon</option>
+              <option value="Marseille">Marseille</option>
+              <option value="Nantes">Nantes</option>
+              <option value="Orléans">Orléans</option>
+              <option value="Paris">Paris</option>
+              <option value="Reims">Reims</option>
+              <option value="Strasbourg">Strasbourg</option>
+              <option value="Toulouse">Toulouse</option>
+              <option value="Tours">Tours</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option value="Amsterdam">Amsterdam</option>
+              <option value="Barcelone">Barcelone</option>
+              <option value="Berlin">Berlin</option>
+              <option value="Bruxelles">Bruxelles</option>
+              <option value="Bucarest">Bucarest</option>
+              <option value="Lisbonne">Lisbonne</option>
+              <option value="Londres">Londres</option>
+              <option value="Madrid">Madrid</option>
+            </optgroup>
+            <optgroup label="Distantiel">
+              <option value="Remote francophone"></option>
+              <option value="Remote Anglophone"></option>
+            </optgroup>
+          </select>
         </li>
       </ul>
+
       <div class="scroller">
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
@@ -84,10 +118,14 @@
           recusandae illo dolores?
         </p>
       </div>
-      <input type="checkbox" id="accepte" name="accepte" checked />
-      <label for="accepte">J'accepte</label>
-      <label for="jouer"></label>
-      <input type="submit" id="jouer" value="Jouer" />
+      <div class="checkbox">
+        <input type="checkbox" id="accepte" name="accepte" checked />
+        <label for="accepte">J'accepte</label>
+      </div>
+      <div class="btn btn-valide">
+        <label for="jouer"></label>
+        <input type="submit" id="jouer" value="Jouer" />
+      </div>
     </form>
   </body>
 </html>
