@@ -1,33 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
-
-:root {
-  --wild-saumon: #f76c6c;
-  --font-light: #eee;
-  --font-dark: #383838;
-  --background-footer: #39424e;
-  --valid: #41b56f;
-  --error: #c62828;
-  --saumon-pale: #fba6a6;
-}
-
-body {
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-}
-
-.main-header,
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Varela Round", sans-serif;
-}
-
-/* Header ====================================================*/
-
 .main-header {
-  position: fixed;
-  width: 100vw;
   color: var(--font-light);
   text-align: center;
   margin: 0;
@@ -35,7 +6,7 @@ h4 {
   height: 3rem;
   text-align: center;
   box-shadow: 0 0 10px #353535a8;
-  transition: height 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .main-header.open {
@@ -60,13 +31,13 @@ h4 {
 .main-nav-mobile {
   align-self: flex-start;
   text-align: left;
-  visibility: hidden;
+  display: none;
   opacity: 0;
   transition: opacity 0.5s linear;
 }
 
 .main-header.open .main-nav-mobile {
-  visibility: initial;
+  display: initial;
   opacity: 1;
 }
 
@@ -138,34 +109,6 @@ h4 {
   color: var(--font-light);
 }
 
-/* Footer =====================================================*/
-
-footer {
-  background-color: var(--background-footer);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-.content-items-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-}
-
-.items-footer {
-  margin-bottom: 0.5rem;
-  list-style: none;
-  margin-left: 1rem;
-}
-
-.logo-WCS {
-  width: 8rem;
-}
-
 @media screen and (min-width: 768px) {
   .burger {
     display: none;
@@ -190,23 +133,5 @@ footer {
   .items-nav-desktop {
     list-style: none;
     padding-left: 1rem;
-  }
-
-  /* Footer =====================================================*/
-
-  .content-items-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .items-footer {
-    margin-bottom: 0.5rem;
-    list-style: none;
-    margin-left: 1rem;
   }
 }
