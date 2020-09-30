@@ -1,21 +1,20 @@
 /* PRESET*/
 html,
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 /**/
 .page-title {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 10vh;
 }
 
 /*Début formulaire*/
 form {
-  border: solid black 1px;
-  height: 75vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +38,7 @@ form {
 .input-form {
   width: 80vw;
 }
+
 .input-form > input,
 select {
   box-sizing: border-box;
@@ -61,6 +61,11 @@ select {
   margin-top: 0;
 }
 /*Fin règlement */
+
+.form-footer {
+  margin-top: 5vh;
+  display: flex;
+}
 
 .checkbox {
   display: inline;
