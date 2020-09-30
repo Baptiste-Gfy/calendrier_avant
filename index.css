@@ -41,17 +41,17 @@ h4 {
 }
 
 .main-header.open {
-  height: 8rem;
+  height: 9rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .main-title {
   margin: 0;
+  margin-top: 0.2rem;
 }
 
 .main-title > .nav-link {
-  padding-top: 1rem;
   font-size: 1.5rem;
 }
 
@@ -89,7 +89,7 @@ h4 {
   width: 2.5rem;
   border-radius: 5px;
   background-color: var(--font-light);
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
 }
 
 .slice-burger:nth-child(1) {
@@ -131,7 +131,7 @@ h4 {
 }
 
 .items-nav-mobile {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
 }
 
 .nav-link {
@@ -141,6 +141,7 @@ h4 {
 }
 
 /* Content=====================================================*/
+
 .main-content-home {
   display: flex;
   flex-direction: column;
@@ -189,6 +190,10 @@ footer {
   padding: 1rem;
 }
 
+.items-footer .nav-link {
+  font-size: 1rem;
+}
+
 .content-items-footer {
   display: flex;
   flex-direction: column;
@@ -200,7 +205,6 @@ footer {
 .items-footer {
   margin-bottom: 0.5rem;
   list-style: none;
-  margin-left: 1rem;
 }
 
 .logo-WCS {
@@ -224,11 +228,18 @@ footer {
     padding: 0;
   }
 
+  .content-message-intro {
+    font-size: 1.5rem;
+    line-height: 4rem;
+    max-width: 30rem;
+  }
+
   .main-title > .nav-link {
     padding-top: 0;
     display: block;
     width: max-content;
   }
+
   .content-items-nav-desktop {
     display: flex;
     margin-right: 1rem;
@@ -276,6 +287,6 @@ footer {
 @media screen and (orientation: landscape) and (max-height: 475px) {
   .main-content-home {
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 8.5rem;
   }
 }
