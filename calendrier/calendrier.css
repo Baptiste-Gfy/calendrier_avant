@@ -1,0 +1,92 @@
+
+
+h1 {
+    display: none;
+}
+
+.semaine{
+    display:none;
+}
+
+li{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    text-align:center;
+    padding:30px;
+    margin:4vw 5vw;
+    border-radius: 5px;
+    color: white;
+    background-color: #FBA6A6;
+    width: auto;
+    box-shadow:2px 6px 12px #aaa;
+    font: size 18;
+}
+
+.jour-off{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    text-align:center;
+    padding:30px;
+    margin: 4vw 5vw;
+    border-radius: 5px;
+    color: white;
+    background-color: #C4C4C4;
+    width: auto;
+    font: size 18;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        margin: 3vw;
+        background-image:url(../asset/sapin_crop.png) ;
+        background-position:bottom right;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size:20rem;
+    }
+    h1{
+        display:block;
+        text-align:center;
+        box-sizing:border-box;
+        m
+    
+    }
+
+    .semaine, .jour{
+        display:grid;
+        grid-template-columns: repeat(7,1fr);
+        column-gap: 1vw;
+        row-gap: 1vw;
+    }
+
+    .jour li:first-child{
+        grid-column:2;
+    }
+    
+    li{
+        margin:0;
+        box-sizing: border-box;    
+    }
+    .jour-off{
+        margin:0;
+    }
+    .jour{
+        margin:0;
+        padding:0;
+    }
+    .semaine{
+        padding:0
+    }
+    .jour-semaine{
+        box-shadow:none;
+        background-color:transparent;
+        color: black;
+    }
+    
+    
+
+
+    
+}
