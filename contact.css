@@ -1,4 +1,11 @@
+.main-title {
+  margin-top: 0.5rem;
+}
+
 .main-contact {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 1em;
   padding-top: 4rem;
   padding-bottom: 7rem;
@@ -17,17 +24,22 @@
 
 .profile-photo {
   border-radius: 5rem;
+  max-width: 6.25rem;
 }
 
 .profile-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-style: normal;
+  margin-left: 0.5rem;
 }
 
 .team-description {
   text-align: center;
-  line-height: 2rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .form-contact {
@@ -37,27 +49,68 @@
   justify-content: space-between;
 }
 
-.input {
-  border: none;
-  border-bottom: 0.1rem solid var(--font-dark);
-  transition: all 0.1s linear;
-}
-
-.label-placeholder {
-  position: relative;
-  transform: translate(0, -2.6rem) scale(1);
-  width: max-content;
-  transition: all 0.2s linear;
-}
-
-.input:focus {
-  border-color: skyblue;
-}
-
-.input-name:focus ~ .label-name {
-  transform: translate(-0.3rem, -4rem) scale(0.8);
-}
-
 .form-contact > .btn {
   align-self: flex-end;
+}
+
+.message-contact {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 0.5px solid var(--font-dark);
+}
+
+@media screen and (min-width: 768px) {
+  .main-title {
+    margin-top: 0;
+  }
+
+  .main-contact {
+    height: 105vh;
+  }
+
+  .profile {
+    flex-direction: column;
+  }
+
+  .content-profile {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .profile-photo {
+    max-width: max-content;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    margin-left: 0;
+  }
+
+  .profile-info > a {
+    margin-top: 1rem;
+  }
+
+  .container-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .form-contact {
+    flex: 1;
+    max-width: 45vw;
+  }
+
+  .separate {
+    align-self: normal;
+    border-color: #c5c5c5;
+  }
+
+  .team-description {
+    text-align: left;
+    flex: 1;
+    max-width: 45vw;
+  }
 }
