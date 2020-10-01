@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="main-header">
-        <h1 class="main-title"><a class="nav-link" href="#">En attendant noël</a></h1>
+        <h2 class="main-title"><a class="nav-link" href="#">En attendant noël</a></h2>
         <div class="burger">
             <span class="slice-burger"></span>
             <span class="slice-burger"></span>
@@ -87,43 +87,68 @@
     </section>
     <section>
         <ul class="jour-desktop"> 
-            <li class="jour-on-desktop"><p>1 décembre</p></li>
-            <li class="jour-on-desktop"><p>2 décembre</p></li>
-            <li class="jour-on-desktop"><p>3 décembre</p></li>
-            <li class="jour-on-desktop"><p>4 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>1 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>2 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>3 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>4 décembre</p></li>
             
 
-            <li class="jour-off-desktop"><p>5 décembre</p></li>
-            <li class="jour-off-desktop"><p>6 décembre</p></li>
+            <li class="jour-off-desktop" onclick="on()"><p>5 décembre</p></li>
+            <li class="jour-off-desktop" onclick="on()"><p>6 décembre</p></li>
             
         
-            <li class="jour-on-desktop"><p>7 décembre</p></li>
-            <li class="jour-on-desktop"><p>8 décembre</p></li>
-            <li class="jour-on-desktop"><p>9 décembre</p></li>
-            <li class="jour-on-desktop"><p>10 décembre</p></li>
-            <li class="jour-on-desktop"><p>11 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>7 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>8 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>9 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>10 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>11 décembre</p></li>
         
-            <li class="jour-off-desktop"><p>12 décembre</p></li>
-            <li class="jour-off-desktop"><p>13 décembre</p></li>
-        
-        
-            <li class="jour-on-desktop"><p>14 décembre</p></li>
-            <li class="jour-on-desktop"><p>15 décembre</p></li>
-            <li class="jour-on-desktop"><p>16 décembre</p></li>
-            <li class="jour-on-desktop"><p>17 décembre</p></li>
-            <li class="jour-on-desktop"><p>18 décembre</p></li>
+            <li class="jour-off-desktop" onclick="on()"><p>12 décembre</p></li>
+            <li class="jour-off-desktop" onclick="on()"><p>13 décembre</p></li>
         
         
-            <li class="jour-off-desktop"><p>19 décembre</p></li>
-            <li class="jour-off-desktop"><p>20 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>14 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>15 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>16 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>17 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>18 décembre</p></li>
         
         
-            <li class="jour-on-desktop"><p>21 décembre</p></li>
-            <li class="jour-on-desktop"><p>22 décembre</p></li>
-            <li class="jour-on-desktop"><p>23 décembre</p></li>
-            <li class="jour-on-desktop"><p>24 décembre</p></li>
+            <li class="jour-off-desktop" onclick="on()"><p>19 décembre</p></li>
+            <li class="jour-off-desktop" onclick="on()"><p>20 décembre</p></li>
+        
+        
+            <li class="jour-on-desktop" onclick="on()"><p>21 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>22 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>23 décembre</p></li>
+            <li class="jour-on-desktop" onclick="on()"><p>24 décembre</p></li>
         </ul>
     </section>
+    </section>
+    <section id="overlay" >
+        <div class="pop-desktop">
+            <div>
+            <img class="illustration-desktop" src="http://via.placeholder.com/250">
+            </div>
+            <div class="right-box">
+                <div class="close-window" onclick="off()">
+                    <span class="close-cross-x"></span>
+                    <span class="close-cross-y"></span>
+                </div>
+            
+            <p class="question-desktop">Qui est l'inventeur de GIT?</p>
+            <select class="select-desktop">
+                <option>-- choisis ta réponse --</option>
+                <option>réponse 1</option>
+                <option>réponse 2</option>
+                <option>réponse 3</option>
+                <option>réponse 4</option>
+            </select>
+            <button class="Go-desktop">Go!</button>
+            </div>
+            
+        </div>
+
     </section>
     <footer>
         <ul class="content-items-footer">
@@ -132,5 +157,8 @@
         </ul>
         <img class="logo-WCS" src="../asset/logo-WSC.png" alt="logo Wild Code School">
     </footer>
+    <script src="./calendrier.js"></script>
+    <script src="../index.js"> </script>
+    
 </body>
 </html>
