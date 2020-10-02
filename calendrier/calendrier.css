@@ -24,7 +24,7 @@ h1 {
     box-sizing: border-box;
     text-align:center;
     padding:20px 0;
-    margin:4vw 5vw;
+    margin:4vw 5vw 0;
     border-radius: 5px;
     color: white;
     background-color: #FBA6A6;
@@ -63,6 +63,55 @@ h1 {
 #overlay{
     display:none;
 }
+#volet1{
+    height:;
+    width:auto;
+    display:flex;
+    flex-direction:column;
+    margin: 4vw 5vw;
+    padding:8vw;
+    justify-content: space-around;
+    background-color:#E5E5E5;
+    margin-top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px;
+}
+
+.illustration-mobile{
+    border-radius:5px;
+}
+
+.select-mobile{
+    min-height:5vh;
+    min-width: 20vw;
+    border-radius:5px;
+    color:white;
+    background-color:#383838;
+    max-width:50vw;
+    min-width:50vw;
+    margin-right:10vw;;
+}
+.Go-mobile{
+    min-height:5vh;
+    border-radius: 5px;
+    border-color:#c62828;
+    color:white;
+    background-color:#c62828;
+    transition:all 0.2s ease-in-out;
+    border:none;
+    max-width:45px;
+    
+}
+
+.Go-mobile:focus{
+    
+    background-color:#41b56f;
+    border-color:#41b56f;
+    outline:none;
+}
+.question-mobile{
+    font-size:1.5rem;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -87,6 +136,10 @@ h1 {
     .jour-off-mobile{
         display:none;
     }
+    #volet1{
+        display:none;
+    }
+    
 
     .semaine, .jour-desktop{
         display:grid;
@@ -159,9 +212,31 @@ h1 {
         margin:2vw;
     }
     
-    #overlay{
-        position: fixed;
+    /*#opacity{
+        background-color:black;
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        opacity:0.5;
         display:block;
+    }*/
+
+    #opacity{
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(2px);
+        display:none;
+        position:absolute;
+        height:100vh;
+        width:100vw;
+    }
+    
+    .pop-desktop{
+        position: fixed;
         width: 90vh;
         height:50vh;
         top:25vh;
@@ -170,12 +245,8 @@ h1 {
         z-index:2;
         border-radius:5px;
         position:absolute;
-    }
-    
-    .pop-desktop{
         display:flex;
-        flex-direction: row;
-        
+        flex-direction:row;
         justify-content:space-around;
     }
 
@@ -205,7 +276,7 @@ h1 {
         outline:none;
     }
     .question-desktop{
-        font-size:1.2rem;
+        font-size:1.5rem;
     }
     .close-window{
         position:absolute;
@@ -237,11 +308,11 @@ h1 {
     }
 
     .illustration-desktop{
-        margin-top:8vh;
-        margin-left:1vw;
+        margin: 8vh 2vw
     }
     .right-box{
         margin-top: 12vh;
+        margin-right: 2vw;;
     }
     
 }
