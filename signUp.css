@@ -23,6 +23,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  height: 20vh;
 }
 
 .cadre-form {
