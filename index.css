@@ -47,11 +47,13 @@ h4 {
 }
 
 .main-title {
+
   margin: 0;
   margin-top: 0.2rem;
 }
 
 .main-title > .nav-link {
+
   font-size: 1.5rem;
 }
 
@@ -219,6 +221,9 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  position:fixed;
+  bottom:0;
+  width:100vw;
 }
 
 .items-footer .nav-link {

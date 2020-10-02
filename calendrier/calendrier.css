@@ -1,0 +1,318 @@
+
+
+h1 {
+    display: none;
+}
+.main-title{
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.semaine{
+    display:none;
+}
+.jour-mobile{
+    padding-left: 0;
+}
+
+.jour-on-desktop{
+    display:none;
+}
+.jour-on-mobile{
+    display:flex;
+    flex-direction:column;
+    box-sizing: border-box;
+    text-align:center;
+    padding:20px 0;
+    margin:4vw 5vw 0;
+    border-radius: 5px;
+    color: white;
+    background-color: #FBA6A6;
+    width: auto;
+    transition:all 0.2s ease-in-out;
+    font-size: 16;
+    cursor:pointer;
+    box-shadow:2px 6px 12px #aaa;
+}
+.jour-on-mobile:active{
+    box-shadow: 0 0 0;
+}
+
+
+.jour-off-desktop{
+    display:none;
+}
+.jour-off-mobile{
+    display:flex;
+    flex-direction:column;
+    box-sizing:border-box;
+    text-align:center;
+    padding:20px 0;
+    margin: 4vw 5vw;
+    border-radius: 5px;
+    color: white;
+    background-color: #C4C4C4;
+    width: auto;
+    font-size: 16;
+    transition:all 0.2s ease-in-out;
+    box-shadow:2px 6px 12px #aaa;
+}
+.jour-off-mobile:active{
+    box-shadow: 0 0 0;
+}
+#overlay{
+    display:none;
+}
+#volet1{
+    height:;
+    width:auto;
+    display:flex;
+    flex-direction:column;
+    margin: 4vw 5vw;
+    padding:8vw;
+    justify-content: space-around;
+    background-color:#E5E5E5;
+    margin-top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:5px;
+}
+
+.illustration-mobile{
+    border-radius:5px;
+}
+
+.select-mobile{
+    min-height:5vh;
+    min-width: 20vw;
+    border-radius:5px;
+    color:white;
+    background-color:#383838;
+    max-width:50vw;
+    min-width:50vw;
+    margin-right:10vw;;
+}
+.Go-mobile{
+    min-height:5vh;
+    border-radius: 5px;
+    border-color:#c62828;
+    color:white;
+    background-color:#c62828;
+    transition:all 0.2s ease-in-out;
+    border:none;
+    max-width:45px;
+    
+}
+
+.Go-mobile:focus{
+    
+    background-color:#41b56f;
+    border-color:#41b56f;
+    outline:none;
+}
+.question-mobile{
+    font-size:1.5rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    body{
+        
+        background-image:url(../asset/sapin_crop.png) ;
+        background-position:bottom right;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size:20rem;
+    }
+    h1{
+        display:block;
+        text-align:center;
+        box-sizing:border-box;
+        margin-top: 10vh;
+    
+    }
+    .jour-on-mobile{
+        display:none;
+    }
+    .jour-off-mobile{
+        display:none;
+    }
+    #volet1{
+        display:none;
+    }
+    
+
+    .semaine, .jour-desktop{
+        display:grid;
+        grid-template-columns: repeat(7,1fr);
+        column-gap: 1vw;
+        row-gap: 1vw;
+        list-style: none;
+        text-align:center;
+    }
+
+    .jour-desktop li:first-child{
+        grid-column:2;
+    }
+    
+    .jour-on-desktop{
+        display:block;
+        margin:0;
+        padding: 20px 0;
+        box-sizing: border-box;
+        cursor:pointer;
+        list-style: none;
+        background-color: #FBA6A6;
+        color:white;
+        border-radius: 5px;  
+        transition:all 0.2s ease-in-out; 
+    }
+    .jour-on-desktop:hover{
+        box-shadow:2px 6px 12px #aaa;
+    }
+    .jour-on-desktop:active{
+        box-shadow: 0 0 0;
+    }
+
+    .jour-off-desktop{
+        display:block;
+        margin:0;
+        padding:20px 0;
+        box-sizing: border-box;
+        cursor:pointer;
+        list-style: none;
+        background-color: #C4C4C4;
+        color:white;
+        border-radius: 5px;
+        transition:all 0.2s ease-in-out;
+    }
+    
+    }
+    .jour-off-desktop:hover{
+        box-shadow:2px 6px 12px #aaa;
+    }
+    .jour-off-desktop:active{
+        box-shadow: 0 0 0;
+    }
+
+    .jour-desktop{
+        margin:0;
+        padding:0;
+    }
+
+    .semaine{
+        padding:0
+    }
+
+    .jour-semaine{
+        box-shadow:none;
+        background-color:transparent;
+        color: black;
+    }
+    .calendrier{
+        margin:2vw;
+    }
+    
+    /*#opacity{
+        background-color:black;
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        opacity:0.5;
+        display:block;
+    }*/
+
+    #opacity{
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(2px);
+        display:none;
+        position:absolute;
+        height:100vh;
+        width:100vw;
+    }
+    
+    .pop-desktop{
+        position: fixed;
+        width: 90vh;
+        height:50vh;
+        top:25vh;
+        left:15vw;
+        background-color: #E5E5E5;
+        z-index:2;
+        border-radius:5px;
+        position:absolute;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+    }
+
+    .select-desktop{
+        min-height:5vh;
+        min-width: 20vw;
+        border-radius:5px;
+        color:white;
+        background-color:#383838;
+    }
+    .Go-desktop{
+        min-height:5vh;
+        border-radius: 5px;
+        border-color:#c62828;
+        color:white;
+        background-color:#c62828;
+        transition:all 0.2s ease-in-out;
+        border:none;
+    }
+    .Go-desktop:hover{
+        box-shadow:2px 6px 12px #aaa;
+    }
+    .Go-desktop:focus{
+        box-shadow:0 0 0 0;
+        background-color:#41b56f;
+        border-color:#41b56f;
+        outline:none;
+    }
+    .question-desktop{
+        font-size:1.5rem;
+    }
+    .close-window{
+        position:absolute;
+        right:2vh;
+        top:.5vh;
+        cursor:pointer;
+    }
+    .close-cross-x{
+        position:absolute;
+        display:block;
+        right:1vh;
+        top:1vh;
+        height:25px;
+        width: 2px;
+        border-radius: 5px;
+        background-color:black;
+        transform: rotate(45deg);
+    }
+    .close-cross-y{
+        position:absolute;
+        display:block;
+        right:1vh;
+        top:1vh;
+        height:25px;
+        width: 2px;
+        border-radius: 5px;
+        background-color:black;
+        transform: rotate(-45deg);
+    }
+
+    .illustration-desktop{
+        margin: 8vh 2vw
+    }
+    .right-box{
+        margin-top: 12vh;
+        margin-right: 2vw;;
+    }
+    
+}

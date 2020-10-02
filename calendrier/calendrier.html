@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="calendrier.css" />
+    <title>Calendrier</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h2 class="main-title">
+        <a class="nav-link" href="#">En attendant noël</a>
+      </h2>
+      <div class="burger">
+        <span class="slice-burger"></span>
+        <span class="slice-burger"></span>
+        <span class="slice-burger"></span>
+        <span class="slice-burger"></span>
+      </div>
+      <nav class="main-nav-mobile">
+        <ul class="content-items-nav-mobile">
+          <li class="items-nav-mobile">
+            <a class="nav-link" href="#">Inscription</a>
+          </li>
+          <li class="items-nav-mobile">
+            <a class="nav-link" href="./calendrier/calendrier.html">Calendrier</a>
+          </li>
+          <li class="items-nav-mobile">
+            <a class="nav-link" href="#">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="main-nav-desktop">
+        <ul class="content-items-nav-desktop">
+          <li class="items-nav-desktop">
+            <a href="#" class="nav-link">Inscription</a>
+          </li>
+          <li class="items-nav-desktop">
+            <a href="#" class="nav-link">Calendrier</a>
+          </li>
+          <li class="items-nav-desktop">
+            <a href="#" class="nav-link">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="opacity"></section>
+    <h1>Calendrier</h1>
+
+    <section class="calendrier">
+      <section>
+        <ul class="semaine">
+          <li class="jour-semaine"><p>Lundi</p></li>
+          <li class="jour-semaine"><p>Mardi</p></li>
+          <li class="jour-semaine"><p>Mercredi</p></li>
+          <li class="jour-semaine"><p>Jeudi</p></li>
+          <li class="jour-semaine"><p>Vendredi</p></li>
+          <li class="jour-semaine"><p>Samedi</p></li>
+          <li class="jour-semaine"><p>Dimanche</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <ul class="jour-mobile">
+          <li class="jour-on-mobile"><p>1 décembre</p></li>
+          <div id="volet1">
+              <img class="illustration-mobile" src="http://via.placeholder.com/400x200" alt="créateur git"/>
+              <p class="question-mobile">Comment s'appelle le créateur de GIT?</p>
+              <div class="select-go-mobile">
+              <select class="select-mobile">
+                <option>-- choisis ta réponse --</option>
+                <option>réponse 1</option>
+                <option>réponse 2</option>
+                <option>réponse 3</option>
+                <option>réponse 4</option>
+              </select>
+              <button class="Go-mobile">Go!</button>
+              </div>
+            <a href="#volet1" class="ouvrir"></a>
+          </div>
+          <li class="jour-on-mobile"><p>2 décembre</p></li>
+          <li class="jour-on-mobile"><p>3 décembre</p></li>
+          <li class="jour-on-mobile"><p>4 décembre</p></li>
+
+          <li class="jour-off-mobile"><p>5 décembre</p></li>
+          <li class="jour-off-mobile"><p>6 décembre</p></li>
+
+          <li class="jour-on-mobile"><p>7 décembre</p></li>
+          <li class="jour-on-mobile"><p>8 décembre</p></li>
+          <li class="jour-on-mobile"><p>9 décembre</p></li>
+          <li class="jour-on-mobile"><p>10 décembre</p></li>
+          <li class="jour-on-mobile"><p>11 décembre</p></li>
+
+          <li class="jour-off-mobile"><p>12 décembre</p></li>
+          <li class="jour-off-mobile"><p>13 décembre</p></li>
+
+          <li class="jour-on-mobile"><p>14 décembre</p></li>
+          <li class="jour-on-mobile"><p>15 décembre</p></li>
+          <li class="jour-on-mobile"><p>16 décembre</p></li>
+          <li class="jour-on-mobile"><p>17 décembre</p></li>
+          <li class="jour-on-mobile"><p>18 décembre</p></li>
+
+          <li class="jour-off-mobile"><p>19 décembre</p></li>
+          <li class="jour-off-mobile"><p>20 décembre</p></li>
+
+          <li class="jour-on-mobile"><p>21 décembre</p></li>
+          <li class="jour-on-mobile"><p>22 décembre</p></li>
+          <li class="jour-on-mobile"><p>23 décembre</p></li>
+          <li class="jour-on-mobile"><p>24 décembre</p></li>
+        </ul>
+      </section>
+      <section>
+        <ul class="jour-desktop">
+          <li class="jour-on-desktop" onclick="on()"><p>1 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>2 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>3 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>4 décembre</p></li>
+
+          <li class="jour-off-desktop" onclick="on()"><p>5 décembre</p></li>
+          <li class="jour-off-desktop" onclick="on()"><p>6 décembre</p></li>
+
+          <li class="jour-on-desktop" onclick="on()"><p>7 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>8 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>9 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>10 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>11 décembre</p></li>
+
+          <li class="jour-off-desktop" onclick="on()"><p>12 décembre</p></li>
+          <li class="jour-off-desktop" onclick="on()"><p>13 décembre</p></li>
+
+          <li class="jour-on-desktop" onclick="on()"><p>14 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>15 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>16 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>17 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>18 décembre</p></li>
+
+          <li class="jour-off-desktop" onclick="on()"><p>19 décembre</p></li>
+          <li class="jour-off-desktop" onclick="on()"><p>20 décembre</p></li>
+
+          <li class="jour-on-desktop" onclick="on()"><p>21 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>22 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>23 décembre</p></li>
+          <li class="jour-on-desktop" onclick="on()"><p>24 décembre</p></li>
+        </ul>
+      </section>
+    </section>
+    
+    <section id="overlay">
+      <div class="pop-desktop">
+        <div>
+          <img
+            class="illustration-desktop"
+            src="http://via.placeholder.com/250" alt="créateur git"
+          />
+        </div>
+        <div class="right-box">
+          <div class="close-window" onclick="off()">
+            <span class="close-cross-x"></span>
+            <span class="close-cross-y"></span>
+          </div>
+
+          <p class="question-desktop">Comment s'appelle le créateur de GIT?</p>
+          <select class="select-desktop">
+            <option>-- choisis ta réponse --</option>
+            <option>réponse 1</option>
+            <option>réponse 2</option>
+            <option>réponse 3</option>
+            <option>réponse 4</option>
+          </select>
+          <button class="Go-desktop">Go!</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <ul class="content-items-footer">
+        <li class="items-footer">
+          <a class="nav-link" href="#">Qui sommes-nous ?</a>
+        </li>
+        <li class="items-footer">
+          <a class="nav-link" href="#">Contactez-nous</a>
+        </li>
+      </ul>
+      <img
+        class="logo-WCS"
+        src="../asset/logo-WSC.png"
+        alt="logo Wild Code School"
+      />
+    </footer>
+    <script src="./calendrier.js"></script>
+    <script src="../index.js"></script>
+  </body>
+</html>
