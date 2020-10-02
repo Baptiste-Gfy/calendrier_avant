@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let header = document.querySelector(".main-header");
     let burger = document.querySelector(".burger");
 
-    if (!e.target.classList.contains("burger")) {
+    if (!e.target.classList.contains("slice-burger")) {
       header.classList.remove("open");
       burger.classList.remove("open");
     }
