@@ -1,54 +1,52 @@
-/* PRESET*/
-html,
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-/**/
-.page-title {
-  text-align: center;
-  margin-top: 10vh;
+/*----------header----------*/
+
+/*------links to index------*/
+
+/*-----------body-----------*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/*Début formulaire*/
-form {
-  height: 70vh;
+.title {
+  margin-top: 8vh;
+  text-align: center;
+}
+
+section {
+  margin: 0 0 2vh 0;
+}
+
+/*formulaire*/
+.formulaire {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 }
-/*Unorder-list*/
-.grp-input {
-  margin: 0;
-  padding: 0 0.25vw 0 0.25vw;
-  background-color: lightgray;
-  margin: 0 5vw 0 5vw;
-  border-radius: 0.5rem;
-  height: 30vh;
+
+.cadre-form {
+  height: 100%;
   width: 90vw;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #eee;
 }
 
 .input-form {
-  width: 80vw;
 }
-
-.input-form > input,
-select {
-  box-sizing: border-box;
-  width: 100%;
-}
-
-/*Début règlement*/
 .scroller {
-  width: 90vw;
-  height: 30vh;
+  background-color: blue;
+  height: 20vh;
   margin: 0.5vh 0.5vw 0 0.5vw;
   border: solid salmon 3px;
   border-radius: 0.5rem;
@@ -56,17 +54,9 @@ select {
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
 }
-
-.scroller p {
-  margin-top: 0;
-}
-/*Fin règlement */
-
-.form-footer {
-  margin-top: 5vh;
-  display: flex;
+.validation {
 }
 
-.checkbox {
-  display: inline;
-}
+/*----------footer----------*/
+
+/*------links to index------*/
