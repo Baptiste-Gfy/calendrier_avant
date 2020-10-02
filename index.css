@@ -13,6 +13,7 @@
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
+  color: var(--font-dark);
 }
 
 .main-header,
@@ -40,17 +41,19 @@ h4 {
 }
 
 .main-header.open {
-  height: 8rem;
+  height: 9rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .main-title {
-  margin: O;
+
+  margin: 0;
+  margin-top: 0.2rem;
 }
 
 .main-title > .nav-link {
-  padding: 1rem;
+
   font-size: 1.5rem;
 }
 
@@ -88,7 +91,7 @@ h4 {
   width: 2.5rem;
   border-radius: 5px;
   background-color: var(--font-light);
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
 }
 
 .slice-burger:nth-child(1) {
@@ -130,7 +133,7 @@ h4 {
 }
 
 .items-nav-mobile {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
 }
 
 .nav-link {
@@ -139,9 +142,80 @@ h4 {
   color: var(--font-light);
 }
 
+/* Content =====================================================*/
+
+.main-content-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.content-message-intro {
+  margin-top: 0;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  max-width: 20rem;
+}
+
+.input {
+  font-family: "raleway";
+  border: none;
+  outline: none;
+  border-bottom: 0.1rem solid var(--font-dark);
+  transition: all 0.1s linear;
+  background-color: transparent !important;
+  font-size: 1rem;
+}
+
+.label-placeholder {
+  font-family: "raleway";
+  cursor: text;
+  position: relative;
+  transform: translate(0, -2.5rem) scale(1);
+  width: max-content;
+  transition: all 0.2s linear;
+}
+
+.input:focus {
+  border-color: skyblue;
+}
+
+.input-name:focus ~ .label-name,
+.input-email:focus ~ .label-email,
+.input-name:not(:placeholder-shown) ~ .label-name,
+.input-email:not(:placeholder-shown) ~ .label-email {
+  color: #909090;
+  transform: translate(-0.3rem, -3.8rem) scale(0.8);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 3rem;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-valid {
+  background-color: var(--valid);
+  color: var(--font-light);
+}
+
+.btn-error {
+  background-color: var(--error);
+  color: var(--font-light);
+}
+
 /* Footer =====================================================*/
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   background-color: var(--background-footer);
   display: flex;
   align-items: center;
@@ -150,6 +224,10 @@ footer {
   position:fixed;
   bottom:0;
   width:100vw;
+}
+
+.items-footer .nav-link {
+  font-size: 1rem;
 }
 
 .content-items-footer {
@@ -163,7 +241,6 @@ footer {
 .items-footer {
   margin-bottom: 0.5rem;
   list-style: none;
-  margin-left: 1rem;
 }
 
 .logo-WCS {
@@ -187,11 +264,18 @@ footer {
     padding: 0;
   }
 
+  .content-message-intro {
+    font-size: 1.5rem;
+    line-height: 4rem;
+    max-width: 30rem;
+  }
+
   .main-title > .nav-link {
     padding-top: 0;
     display: block;
     width: max-content;
   }
+
   .content-items-nav-desktop {
     display: flex;
     margin-right: 1rem;
@@ -203,6 +287,20 @@ footer {
     width: max-content;
   }
 
+  /* Main =======================================================*/
+
+  .main-content-home {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .btn-valid:hover {
+    box-shadow: 0 5px 6px #383838b0;
+  }
+
+  .btn-valid:active {
+    box-shadow: 0 0 0;
+  }
   /* Footer =====================================================*/
 
   .content-items-footer {
@@ -219,5 +317,12 @@ footer {
     margin-bottom: 0.5rem;
     list-style: none;
     margin-left: 1rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 475px) {
+  .main-content-home {
+    margin-top: 5rem;
+    margin-bottom: 8.5rem;
   }
 }
