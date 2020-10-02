@@ -140,7 +140,7 @@ h4 {
   color: var(--font-light);
 }
 
-/* Content =====================================================*/
+/* Content=====================================================*/
 
 .main-content-home {
   display: flex;
@@ -156,37 +156,6 @@ h4 {
   font-size: 1.2rem;
   line-height: 3rem;
   max-width: 20rem;
-}
-
-.input {
-  font-family: "raleway";
-  border: none;
-  outline: none;
-  border-bottom: 0.1rem solid var(--font-dark);
-  transition: all 0.1s linear;
-  background-color: transparent !important;
-  font-size: 1rem;
-}
-
-.label-placeholder {
-  font-family: "raleway";
-  cursor: text;
-  position: relative;
-  transform: translate(0, -2.5rem) scale(1);
-  width: max-content;
-  transition: all 0.2s linear;
-}
-
-.input:focus {
-  border-color: skyblue;
-}
-
-.input-name:focus ~ .label-name,
-.input-email:focus ~ .label-email,
-.input-name:not(:placeholder-shown) ~ .label-name,
-.input-email:not(:placeholder-shown) ~ .label-email {
-  color: #909090;
-  transform: translate(-0.3rem, -3.8rem) scale(0.8);
 }
 
 .btn {

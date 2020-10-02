@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="contact.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inscription</title>
   </head>
@@ -54,13 +55,27 @@
 
       <section class="formulaire">
         <ul class="cadre-form">
-          <li class="input-form">
-            <label for="name"></label>
-            <input type="text" id="name" placeholder="Name" />
+          <li>
+            <input
+              class="input input-name"
+              name="name"
+              id="name"
+              type="text"
+              placeholder=" "
+            />
+            <label class="label-placeholder label-name" for="name">Name</label>
           </li>
-          <li class="input-form">
-            <label for=""></label>
-            <input type="text" id="email" placeholder="Email" />
+          <li>
+            <input
+              class="input input-email"
+              id="email"
+              name="email"
+              type="email"
+              placeholder=" "
+            />
+            <label class="label-placeholder label-email" for="email"
+              >E-mail</label
+            >
           </li>
           <li class="input-form">
             <select id="campus" name="campus">
