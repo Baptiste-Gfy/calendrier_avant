@@ -3,55 +3,76 @@
 /*------links to index------*/
 
 /*-----------body-----------*/
+h1 {
+  margin: 0;
+}
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
 .title {
-  margin-top: 8vh;
+  margin-top: 6vh;
+  padding-top: 3vh;
   text-align: center;
 }
 
-section {
-  margin: 0 0 2vh 0;
-}
 
 /*formulaire*/
 .formulaire {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  justify-content: space-around;
   height: 20vh;
-
-  margin: 2rem;
+  margin:  0; 
+  padding:  2rem;
+  
 }
 
 .cadre-form {
-  height: 40vh;
-  width: 80vw;
+  height: 10vh;
+  width: 70vw;
   list-style: none;
   background-color: #eee;
   border-radius: 5px;
   margin: 0;
   padding: 2rem;
+  border: solid  #fba6a6 2px;
 }
-
+/* règlement*/
 .scroller {
   background-color: #eee;
-  height: 20vh;
-  width: 80vw;
+  height: 30vh;
+  width: 70vw;
   margin: 0.5vh 0.5vw 0 0.5vw;
-  border: solid salmon 2px;
+  border: solid  #fba6a6 2px;
   border-radius: 5px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
   padding: 0 2rem;
+
+
 }
 .validation {
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5vh;
+  width : 70vw;
+}
+
+.checkbox {
+  padding: 2% 0;
+}
+
+.btn {
+  height : 5vh;
+  width : 20vw;
+  text-align: center;
+  padding: 0;
 }
 
 /*----------footer----------*/
