@@ -78,3 +78,37 @@ main {
 /*----------footer----------*/
 
 /*------links to index------*/
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+  main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin : 0 2.5vw;
+  }
+  .title{
+    width : 100vw;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+  }
+
+  .formulaire{
+  max-width : 40vw;
+  height : 35vh;
+  }
+.cadre-form {
+  max-width : 40vw;
+  height : 30vh;
+  margin : 0;
+}
+.scroller{
+  max-width : 40vw;
+}
+
+
+
+
+
+  }
