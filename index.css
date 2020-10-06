@@ -47,13 +47,11 @@ h4 {
 }
 
 .main-title {
-
   margin: 0;
   margin-top: 0.2rem;
 }
 
 .main-title > .nav-link {
-
   font-size: 1.5rem;
 }
 
@@ -210,6 +208,10 @@ h4 {
   color: var(--font-light);
 }
 
+.btn-signup {
+  background-color: var(--wild-saumon);
+  color: var(--font-light);
+}
 /* Footer =====================================================*/
 
 footer {
@@ -221,9 +223,9 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  position:fixed;
-  bottom:0;
-  width:100vw;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
 .items-footer .nav-link {
@@ -300,6 +302,10 @@ footer {
 
   .btn-valid:active {
     box-shadow: 0 0 0;
+  }
+
+  .btn-signup:hover {
+    box-shadow: 0 5px 6px #383838b0;
   }
   /* Footer =====================================================*/
 
