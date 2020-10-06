@@ -91,7 +91,7 @@ main {
   .title{
     width : 100vw;
     margin-bottom: 10vh;
-    margin-top: 10vh;
+    margin: 10vh;
   }
 
   .formulaire{
