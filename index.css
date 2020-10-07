@@ -47,29 +47,26 @@ h4 {
 }
 
 .main-title {
-
   margin: 0;
   margin-top: 0.2rem;
 }
 
 .main-title > .nav-link {
-
   font-size: 1.5rem;
 }
 
-.content-items-nav-desktop {
+.content-items-nav-header {
   display: none;
 }
 
-.main-nav-mobile {
-  align-self: flex-start;
+.main-nav-header {
   text-align: left;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s linear;
 }
 
-.main-header.open .main-nav-mobile {
+.main-header.open .main-nav-header {
   visibility: initial;
   opacity: 1;
 }
@@ -123,17 +120,17 @@ h4 {
   transform: rotate(-45deg);
 }
 
-.content-items-nav-mobile {
+.content-items-nav-header {
   list-style: none;
-}
-
-.content-items-nav-mobile {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   padding-left: 1rem;
 }
 
-.items-nav-mobile {
-  margin-bottom: 0.4rem;
+.items-nav-header {
+  margin-top: 0.4rem;
 }
 
 .nav-link {
@@ -174,6 +171,7 @@ h4 {
   font-family: "raleway";
   cursor: text;
   position: relative;
+  z-index: -1;
   transform: translate(0, -2.5rem) scale(1);
   width: max-content;
   transition: all 0.2s linear;
@@ -210,6 +208,11 @@ h4 {
   color: var(--font-light);
 }
 
+.btn-disabled {
+  background-color: #eee;
+  color: var(--font-dark);
+}
+
 /* Footer =====================================================*/
 
 footer {
@@ -220,10 +223,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  position:fixed;
-  bottom:0;
-  width:100vw;
+  padding: 0.4rem;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
 .items-footer .nav-link {
@@ -239,7 +242,6 @@ footer {
 }
 
 .items-footer {
-  margin-bottom: 0.5rem;
   list-style: none;
 }
 
@@ -249,6 +251,14 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .app {
+    background-image: url(../asset/sapin_crop.png);
+    background-position: bottom right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 20rem;
+  }
+
   .burger {
     display: none;
   }
@@ -265,6 +275,7 @@ footer {
   }
 
   .content-message-intro {
+    text-align: left;
     font-size: 1.5rem;
     line-height: 4rem;
     max-width: 30rem;
@@ -276,13 +287,21 @@ footer {
     width: max-content;
   }
 
-  .content-items-nav-desktop {
+  .main-nav-header {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .content-items-nav-header {
     display: flex;
+    flex-direction: row;
+    margin: 0;
     margin-right: 1rem;
   }
 
-  .items-nav-desktop {
+  .items-nav-header {
     list-style: none;
+    margin-top: 0;
     padding-left: 1rem;
     width: max-content;
   }
@@ -301,6 +320,7 @@ footer {
   .btn-valid:active {
     box-shadow: 0 0 0;
   }
+
   /* Footer =====================================================*/
 
   .content-items-footer {
