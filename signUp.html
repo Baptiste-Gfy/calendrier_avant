@@ -1,176 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="signup.css" />
-    <link rel="stylesheet" href="contact.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inscription</title>
-  </head>
 
-  <body>
-    <header class="main-header">
-      <h1 class="main-title">
-        <a class="nav-link" href="/index.html">En attendant noël</a>
-      </h1>
-      <div class="burger">
-        <span class="slice-burger"></span>
-        <span class="slice-burger"></span>
-        <span class="slice-burger"></span>
-        <span class="slice-burger"></span>
-      </div>
-      <nav class="main-nav-mobile">
-        <ul class="content-items-nav-mobile">
-          <li class="items-nav-mobile">
-            <a class="nav-link" href="/signUp.html">Inscription</a>
-          </li>
-          <li class="items-nav-mobile">
-            <a class="nav-link" href="/calendrier/calendrier.html"
-              >Calendrier</a
-            >
-          </li>
-          <li class="items-nav-mobile">
-            <a class="nav-link" href="/contact.html">Contactez-nous</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="main-nav-desktop">
-        <ul class="content-items-nav-desktop">
-          <li class="items-nav-desktop">
-            <a href="./signUp.html" class="nav-link">Inscription</a>
-          </li>
-          <li class="items-nav-desktop">
-            <a href="./calendrier/calendrier.html" class="nav-link"
-              >Calendrier</a
-            >
-          </li>
-          <li class="items-nav-desktop">
-            <a href="/contact.html" class="nav-link">Contactez-nous</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription</title>
+</head>
 
-    <main>
-      <section class="title">
-        <h1>Inscription</h1>
-      </section>
-
-      <section class="formulaire">
-        <form id="contact" class="form-contact cadre-form" action="#">
-          <!--Name-->
-          <input
-            class="input input-name"
-            name="name"
-            id="name"
-            type="text"
-            placeholder=" "
-          />
-          <label class="label-placeholder label-name" for="name">Name</label>
-          <!--Email-->
-          <input
-            class="input input-email"
-            id="email"
-            name="email"
-            type="email"
-            placeholder=" "
-          />
-          <label class="label-placeholder label-email" for="email"
-            >E-mail</label
-          >
-          <!--Campus-->
-          <select id="campus" name="campus">
-            <option value="">--Choisis ton campus--</option>
-            <optgroup label="France">
-              <option value="Biarritz">Biarritz</option>
-              <option value="Bordeaux">Bordeaux</option>
-              <option value="La Loupe">La Loupe</option>
-              <option value="Lille">Lille</option>
-              <option value="Lyon">Lyon</option>
-              <option value="Marseille">Marseille</option>
-              <option value="Nantes">Nantes</option>
-              <option value="Orléans">Orléans</option>
-              <option value="Paris">Paris</option>
-              <option value="Reims">Reims</option>
-              <option value="Strasbourg">Strasbourg</option>
-              <option value="Toulouse">Toulouse</option>
-              <option value="Tours">Tours</option>
-            </optgroup>
-            <optgroup label="Europe">
-              <option value="Amsterdam">Amsterdam</option>
-              <option value="Barcelone">Barcelone</option>
-              <option value="Berlin">Berlin</option>
-              <option value="Bruxelles">Bruxelles</option>
-              <option value="Bucarest">Bucarest</option>
-              <option value="Lisbonne">Lisbonne</option>
-              <option value="Londres">Londres</option>
-              <option value="Madrid">Madrid</option>
-            </optgroup>
-            <optgroup label="Distantiel">
-              <option value="Remote francophone">Remote francophone</option>
-              <option value="Remote Anglophone">Remote Anglophone</option>
-            </optgroup>
-          </select>
-        </form>
-      </section>
-
-      <section class="scroller">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
-          totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
-          qui ratione eveniet velit voluptatibus doloremque optio vitae
-          recusandae illo dolores?
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
-          totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
-          qui ratione eveniet velit voluptatibus doloremque optio vitae
-          recusandae illo dolores?
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
-          totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
-          qui ratione eveniet velit voluptatibus doloremque optio vitae
-          recusandae illo dolores?
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
-          totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
-          qui ratione eveniet velit voluptatibus doloremque optio vitae
-          recusandae illo dolores?
-        </p>
-      </section>
-
-      <section class="validation">
-        <input type="checkbox" id="accepte" name="accepte" />
-        <label for="accepte">J'accepte</label>
-        <label for="jouer"></label>
-        <input type="submit" id="jouer" value="Jouer" />
-      </section>
-    </main>
-
-    <footer>
-      <ul class="content-items-footer">
-        <li class="items-footer">
-          <a class="nav-link" href="/contact.html">Qui sommes nous ?</a>
+<body>
+  <header class="main-header">
+    <h2 class="main-title">
+      <a class="nav-link" href="/index.html">En attendant noël</a>
+    </h2>
+    <div class="burger">
+      <span class="slice-burger"></span>
+      <span class="slice-burger"></span>
+      <span class="slice-burger"></span>
+      <span class="slice-burger"></span>
+    </div>
+    <nav class="main-nav-header">
+      <ul class="content-items-nav-header">
+        <li class="items-nav-header">
+          <a href="/signUp.html" class="nav-link">Inscription</a>
         </li>
-        <li class="items-footer">
-          <a class="nav-link" href="/contact.html">Contactez-nous</a>
+        <li class="items-nav-header">
+          <a href="/calendrier/calendrier.html" class="nav-link">Calendrier</a>
+        </li>
+        <li class="items-nav-header">
+          <a href="/contact.html" class="nav-link">Contactez-nous</a>
         </li>
       </ul>
-      <a
-        title="site Wild Code School"
-        href="https://www.wildcodeschool.com/fr-FR"
-        target="blank"
-      >
-        <img
-          class="logo-WCS"
-          src="./asset/logo-WSC.png"
-          alt="logo Wild Code School"
-        />
-      </a>
-    </footer>
-    <script src="index.js"></script>
-  </body>
+    </nav>
+  </header>
+
+  <main>
+    <section class="title">
+      <h1>Inscription</h1>
+    </section>
+
+    <section class="formulaire">
+      <form id="contact" class="form-contact cadre-form" action="#">
+        <!--Name-->
+        <input class="input input-name" name="name" id="name" type="text" placeholder=" " />
+        <label class="label-placeholder label-name" for="name">Name</label>
+        <!--Email-->
+        <input class="input input-email" id="email" name="email" type="email" placeholder=" " />
+        <label class="label-placeholder label-email" for="email">E-mail</label>
+        <!--Campus-->
+        <select id="campus" name="campus">
+          <option value="">--Choisis ton campus--</option>
+          <optgroup label="France">
+            <option value="Biarritz">Biarritz</option>
+            <option value="Bordeaux">Bordeaux</option>
+            <option value="La Loupe">La Loupe</option>
+            <option value="Lille">Lille</option>
+            <option value="Lyon">Lyon</option>
+            <option value="Marseille">Marseille</option>
+            <option value="Nantes">Nantes</option>
+            <option value="Orléans">Orléans</option>
+            <option value="Paris">Paris</option>
+            <option value="Reims">Reims</option>
+            <option value="Strasbourg">Strasbourg</option>
+            <option value="Toulouse">Toulouse</option>
+            <option value="Tours">Tours</option>
+          </optgroup>
+          <optgroup label="Europe">
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Barcelone">Barcelone</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Bruxelles">Bruxelles</option>
+            <option value="Bucarest">Bucarest</option>
+            <option value="Lisbonne">Lisbonne</option>
+            <option value="Londres">Londres</option>
+            <option value="Madrid">Madrid</option>
+          </optgroup>
+          <optgroup label="Distantiel">
+            <option value="Remote francophone">Remote francophone</option>
+            <option value="Remote Anglophone">Remote Anglophone</option>
+          </optgroup>
+        </select>
+      </form>
+    </section>
+
+    <section class="scroller">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+        totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
+        qui ratione eveniet velit voluptatibus doloremque optio vitae
+        recusandae illo dolores?
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+        totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
+        qui ratione eveniet velit voluptatibus doloremque optio vitae
+        recusandae illo dolores?
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+        totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
+        qui ratione eveniet velit voluptatibus doloremque optio vitae
+        recusandae illo dolores?
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+        totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
+        qui ratione eveniet velit voluptatibus doloremque optio vitae
+        recusandae illo dolores?
+      </p>
+    </section>
+
+    <section class="validation">
+      <input type="checkbox" id="accepte" name="accepte" />
+      <label for="accepte">J'accepte</label>
+      <label for="jouer"></label>
+      <input type="submit" id="jouer" value="Jouer" />
+    </section>
+  </main>
+
+  <footer>
+    <ul class="content-items-footer">
+      <li class="items-footer">
+        <a class="nav-link" href="/contact.html">Qui sommes nous ?</a>
+      </li>
+      <li class="items-footer">
+        <a class="nav-link" href="/contact.html">Contactez-nous</a>
+      </li>
+    </ul>
+    <a title="site Wild Code School" href="https://www.wildcodeschool.com/fr-FR" target="blank">
+      <img class="logo-WCS" src="./asset/logo-WSC.png" alt="logo Wild Code School" />
+    </a>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
 </html>
