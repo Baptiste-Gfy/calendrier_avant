@@ -8,7 +8,7 @@
   flex-direction: column;
   padding: 1em;
   padding-top: 4rem;
-  padding-bottom: 7rem;
+  padding-bottom: 6rem;
 }
 
 .content-profile {
@@ -43,14 +43,19 @@
 }
 
 .form-contact {
-  height: 30rem;
+  height: 26rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .form-contact > .btn {
-  align-self: flex-end;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.form-contact > .btn-disabled:focus {
+  background-color: #eee;
 }
 
 .message-contact {
@@ -58,6 +63,39 @@
   padding: 0.5rem;
   border-radius: 5px;
   border: 0.5px solid var(--font-dark);
+  max-height: 6rem;
+}
+
+.valid-form {
+  border-color: var(--valid);
+}
+.error {
+  color: var(--error);
+  font-weight: 800;
+  border-color: var(--error);
+}
+
+.error-name,
+.error-email {
+  display: none;
+  animation-name: anim-error;
+  animation-duration: 0.8s;
+  border-color: var(--error);
+  transform: translateY(-1.5rem);
+}
+
+@keyframes anim-error {
+  from {
+    opacity: 0;
+    transform: translateY(-2.5rem);
+  }
+  40% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-1rem);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -66,11 +104,15 @@
   }
 
   .main-contact {
-    height: 105vh;
+    padding-top: 2.5rem;
+    padding-bottom: 0;
+    height: 81vh;
   }
 
   .profile {
+    margin: 0;
     flex-direction: column;
+    align-items: center;
   }
 
   .content-profile {
@@ -96,11 +138,20 @@
   .container-flex {
     display: flex;
     align-items: center;
+    height: 18rem;
+  }
+
+  .container-form {
+    flex: 1;
+    max-width: 45vw;
+    display: flex;
+    justify-content: center;
   }
 
   .form-contact {
-    flex: 1;
-    max-width: 45vw;
+    height: 20rem;
+    max-width: 30rem;
+    width: 35vw;
   }
 
   .separate {
@@ -112,5 +163,32 @@
     text-align: left;
     flex: 1;
     max-width: 45vw;
+  }
+
+  .input {
+    max-width: 20rem;
+    margin-top: 0.5rem;
+  }
+
+  .label-placeholder {
+    transform: translate(0, -1.5rem) scale(1);
+  }
+
+  .input-name:focus ~ .label-name,
+  .input-email:focus ~ .label-email,
+  .input-name:not(:placeholder-shown) ~ .label-name,
+  .input-email:not(:placeholder-shown) ~ .label-email {
+    transform: translate(-0.3rem, -2.5rem) scale(0.8);
+  }
+
+  .message-contact {
+    max-width: 30rem;
+  }
+
+  .error-name,
+  .error-email {
+    outline: none;
+    border-color: var(--error);
+    transform: translateY(-1rem);
   }
 }
