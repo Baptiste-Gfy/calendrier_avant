@@ -7,24 +7,46 @@ h1 {
     margin-top: 0.5rem;
     margin-bottom: 0;
 }
+.contenu{
+    margin:0 0 18vh 0;
+}
+
+.calendrier{
+    margin:0 2vw 0 2vw;
+}
+
+#overlay{
+    display:none;
+}
+#volet{
+    display:none;
+    margin:0;
+    padding:0;
+    height:70vh;
+    width:auto;
+    transition:all 1s ease-in-out;
+}
+
+#volet.open{
+    display:block;
+    transition:all 1s ease-in-out;
+}
 
 .semaine{
     display:none;
 }
-.jour-mobile{
-    padding-left: 0;
+.jour{
+    padding-left:0;
+    margin:5vh 0;
 }
 
-.jour-on-desktop{
-    display:none;
-}
-.jour-on-mobile{
+.jour-on{
     display:flex;
     flex-direction:column;
     box-sizing: border-box;
     text-align:center;
     padding:20px 0;
-    margin:4vw 5vw 0;
+    margin:4vh 0 0 0;
     border-radius: 5px;
     color: white;
     background-color: #FBA6A6;
@@ -34,89 +56,98 @@ h1 {
     cursor:pointer;
     box-shadow:2px 6px 12px #aaa;
 }
-.jour-on-mobile:active{
+.jour-on:first-child{
+    margin-top:12vh;
+}
+.jour-on:active{
     box-shadow: 0 0 0;
 }
 
 
-.jour-off-desktop{
+.jour-off{
     display:none;
 }
-.jour-off-mobile{
+.jour-off{
     display:flex;
     flex-direction:column;
     box-sizing:border-box;
     text-align:center;
     padding:20px 0;
-    margin: 4vw 5vw;
+    margin: 4vh 0 4vh 0;
     border-radius: 5px;
     color: white;
     background-color: #C4C4C4;
     width: auto;
     font-size: 16;
     transition:all 0.2s ease-in-out;
-    box-shadow:2px 6px 12px #aaa;
 }
-.jour-off-mobile:active{
-    box-shadow: 0 0 0;
-}
-#overlay{
-    display:none;
-}
-#volet1{
-    height:;
+
+/* slide on question*/
+
+
+.pop{
+    height:70vh;
     width:auto;
-    display:flex;
-    flex-direction:column;
-    margin: 4vw 5vw;
-    padding:8vw;
-    justify-content: space-around;
+    margin:0;
+    padding:0vw;
     background-color:#E5E5E5;
-    margin-top: 0;
+    margin-bottom: 4vh;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius:5px;
+    display:flex;
+    flex-direction: column;
 }
 
-.illustration-mobile{
+.question{
+    font-size:1.5rem;
+    text-align:center;
+}
+
+
+.illustration{
+    margin:3vh;
     border-radius:5px;
+    object-fit: scale-down;
+    max-height:200px;    
+}
+.right-box{
+    margin-top: 2vh;
+    margin-right: 2vw;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
 }
 
-.select-mobile{
+.select{
     min-height:5vh;
-    min-width: 20vw;
     border-radius:5px;
     color:white;
     background-color:#383838;
-    max-width:50vw;
-    min-width:50vw;
-    margin-right:10vw;;
+    min-width: 30vw;
+    
 }
-.Go-mobile{
+.Go{
     min-height:5vh;
     border-radius: 5px;
-    border-color:#c62828;
-    color:white;
-    background-color:#c62828;
+    border-color:black;
+    color:black;
+    background-color:#eee;
     transition:all 0.2s ease-in-out;
-    border:none;
-    max-width:45px;
     
+    max-width:45px;
+    Margin-left:5vw;
 }
 
-.Go-mobile:focus{
-    
+.Go:focus{
     background-color:#41b56f;
     border-color:#41b56f;
     outline:none;
 }
-.question-mobile{
-    font-size:1.5rem;
-}
+
 
 
 @media screen and (min-width: 768px) {
     body{
-        
         background-image:url(../asset/sapin_crop.png) ;
         background-position:bottom right;
         background-attachment: fixed;
@@ -130,18 +161,20 @@ h1 {
         margin-top: 10vh;
     
     }
-    .jour-on-mobile{
+    .contenu{
+        margin:0; 
+    }
+
+    #volet{
         display:none;
     }
-    .jour-off-mobile{
-        display:none;
-    }
-    #volet1{
-        display:none;
+
+    #overlay{
+        display:block;
     }
     
 
-    .semaine, .jour-desktop{
+    .semaine, .jour{
         display:grid;
         grid-template-columns: repeat(7,1fr);
         column-gap: 1vw;
@@ -149,12 +182,17 @@ h1 {
         list-style: none;
         text-align:center;
     }
+    .jour{
+        padding-left:0;
+        margin:0;
+    }
 
-    .jour-desktop li:first-child{
+    .jour li:first-child{
         grid-column:2;
+        margin:0;
     }
     
-    .jour-on-desktop{
+    .jour-on{
         display:block;
         margin:0;
         padding: 20px 0;
@@ -164,16 +202,17 @@ h1 {
         background-color: #FBA6A6;
         color:white;
         border-radius: 5px;  
-        transition:all 0.2s ease-in-out; 
+        transition:all 0.2s ease-in-out;
+        box-shadow: 0 0 0; 
     }
-    .jour-on-desktop:hover{
+    .jour-on:hover{
         box-shadow:2px 6px 12px #aaa;
     }
-    .jour-on-desktop:active{
+    .jour-on:active{
         box-shadow: 0 0 0;
     }
 
-    .jour-off-desktop{
+    .jour-off{
         display:block;
         margin:0;
         padding:20px 0;
@@ -185,14 +224,6 @@ h1 {
         border-radius: 5px;
         transition:all 0.2s ease-in-out;
     }
-    
-    }
-    .jour-off-desktop:hover{
-        box-shadow:2px 6px 12px #aaa;
-    }
-    .jour-off-desktop:active{
-        box-shadow: 0 0 0;
-    }
 
     .jour-desktop{
         margin:0;
@@ -200,7 +231,7 @@ h1 {
     }
 
     .semaine{
-        padding:0
+        padding:0;
     }
 
     .jour-semaine{
@@ -211,108 +242,134 @@ h1 {
     .calendrier{
         margin:2vw;
     }
+
     
-    /*#opacity{
+    /* opacité de la fenetre*/
+    #opacity{
         background-color:black;
+        opacity:0.5;
         position: absolute;
         top:0;
         left:0;
         right:0;
         bottom:0;
-        opacity:0.5;
-        display:block;
-    }*/
-
-    #opacity{
-        -webkit-filter: blur(2px);
-        -moz-filter: blur(2px);
-        -o-filter: blur(2px);
-        -ms-filter: blur(2px);
-        filter: blur(2px);
         display:none;
+    }
+
+    /*#opacity{
+        
+        filter:;
+        display:block;
         position:absolute;
-        height:100vh;
-        width:100vw;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
     }
     
-    .pop-desktop{
-        position: fixed;
-        width: 90vh;
-        height:50vh;
-        top:25vh;
-        left:15vw;
-        background-color: #E5E5E5;
-        z-index:2;
+    /* fenetre pop up*/
+
+    .pop{
+        width: 60vw;
+        max-width: 800px;
+        height:45vh;
+        max-height: 350px;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        background-color: #fff;
+        z-index:10;
         border-radius:5px;
         position:absolute;
-        display:flex;
+        display:none;
         flex-direction:row;
         justify-content:space-around;
+        padding:1rem;
+        padding:8vh 0 0 0;   
     }
 
-    .select-desktop{
+    .illustration{
+        margin: 4vh 3vw 4vh 3vw;
+        transform:scale(1.3);
+    }
+
+    .right-box{
+        margin-top: 4vh;
+        margin-right: 1vw;
+        display:flex;
+        flex-direction:column;
+        justify-content: start;
+        align-items: center;
+    }
+    
+
+    .select{
         min-height:5vh;
-        min-width: 20vw;
+        min-width: 25vw;
+        max-width:20vw;
         border-radius:5px;
         color:white;
         background-color:#383838;
+        margin:0;
     }
-    .Go-desktop{
+
+    .Go{
         min-height:5vh;
         border-radius: 5px;
-        border-color:#c62828;
-        color:white;
-        background-color:#c62828;
+        border-color:#E5E5E5;
+        color:black;
+        background-color:#eee;
         transition:all 0.2s ease-in-out;
         border:none;
+        margin-left:1vw;
     }
-    .Go-desktop:hover{
+
+    .Go:hover{
         box-shadow:2px 6px 12px #aaa;
     }
-    .Go-desktop:focus{
+
+    .Go:focus{
         box-shadow:0 0 0 0;
         background-color:#41b56f;
         border-color:#41b56f;
         outline:none;
     }
-    .question-desktop{
+
+    .question{
         font-size:1.5rem;
     }
+
     .close-window{
         position:absolute;
-        right:2vh;
+        right:1vh;
         top:.5vh;
         cursor:pointer;
+        height: 24px;
+        width:23px;
+        padding:0;
     }
+
     .close-cross-x{
         position:absolute;
         display:block;
-        right:1vh;
-        top:1vh;
+        right:1.5vh;
+        top:.5vh;
         height:25px;
         width: 2px;
         border-radius: 5px;
         background-color:black;
         transform: rotate(45deg);
     }
+
     .close-cross-y{
         position:absolute;
         display:block;
-        right:1vh;
-        top:1vh;
+        right:1.5vh;
+        top:.5vh;
         height:25px;
         width: 2px;
         border-radius: 5px;
         background-color:black;
         transform: rotate(-45deg);
-    }
-
-    .illustration-desktop{
-        margin: 8vh 2vw
-    }
-    .right-box{
-        margin-top: 12vh;
-        margin-right: 2vw;;
-    }
-    
+    }    
 }
