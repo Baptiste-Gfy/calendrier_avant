@@ -1,6 +1,6 @@
 // Tableau d'objet pour incrémenter les questions de ".pop"
 
-/*const fiche =[
+const fiche =[
     {
         img:"../asset/Linus Torvald.jpg",
         question: "Qui est l'inventeur de GIT?",
@@ -12,12 +12,12 @@
         select:["-- choisis ta réponse --","668px", "958px", "876px", "768px"]
     },
     {
-        img:"../asset/ES6.jpg",
+        img:"../asset/ES6.jpeg",
         question: "En quelle année est sortie ES6 de Javascript?",
         select:["-- choisis ta réponse --","2013", "2014", "2015", "2016"]
     },
     {
-        img:"../asset/JS.jpg",
+        img:"../asset/JS.png",
         question: "quelle fonction me permet de transformer un talbeau en chaine de caratère?",
         select:["-- choisis ta réponse --",".concat()", ".join()", ".split()", ".includes()"]
     },
@@ -38,176 +38,239 @@
     },
     
 ]
+function createPopUp (){
+    if (window.innerWidth > 768) {
+        const sectionElmt = document.createElement('section');
+        sectionElmt.id = 'overlay';
 
-for (let question of fiche) {
-    insertFiche(question);
-}*/
+        const divPop = document.createElement('div');
+        divPop.className = 'pop';
 
-if (window.innerWidth > 768) {
-  // création des éléments de la popUp Desktop.
+        const imgElmt = document.createElement('img');
+        imgElmt.className='illustration';
+        imgElmt.src = fiche[0].img;
+        imgElmt.alt = "illustration";
 
-  /*function insertFiche(question) {
-    const sectionElmt = document.createElement('section');
-    sectionElmt.classList.add('#overlay');
+        const divRBox = document.createElement('div');
+        divRBox.className = 'right-box';
 
-    const divPop = document.createElement('div');
-    divPop.classList.add('pop');
+        const divClose = document.createElement('div');
+        divClose.className = 'close-window';
 
-    const imgElmt = document.createElement('img');
-    imgElmt.classList.add('.illustration');
-    imgElmt.src = fiche.img;
-    imgElmt.alt = "illustration";
+        const spanX = document.createElement('span');
+        spanX.className = 'close-cross-x';
+        const spanY = document.createElement('span');
+        spanY.className = 'close-cross-y';
 
-    const divRBox = document.createElement('div');
-    divRBox.className = 'right-box';
+        divClose.appendChild(spanX);
+        divClose.appendChild(spanY);
 
-    const divClose = document.createElement('div');
-    divClose.className = 'close-window';
+        const p = document.createElement('p');
+        p.innerHTML = fiche[0].question;
+        p.className = 'question';
 
-    const spanX = document.createElement('span');
-    spanX.className = 'close-cross-x';
-    const spanY = document.createElement('span');
-    spanY.className = 'close-cross-Y';
+        const divSelectGo = document.createElement('div');
+        divSelectGo.className = 'Select-Go';
 
-    const p = document.createElement('p');
-    p.innerHTML = fiche.question;
+        const select = document.createElement('select');
+        select.className = 'select';
 
-    const divSelectGo = document.createElement('div');
-    divSelectGo.className = 'Select-Go'
+        const option0 = document.createElement ('option');
+        option0.value = "-- choisis ta réponse --";
+        option0.innerText = "-- choisis ta réponse --";
+        const option1 = document.createElement ('option');
+        option1.value = fiche[0].select[1];
+        option1.innerText = fiche[0].select[1];
+        const option2 = document.createElement ('option');
+        option2.value = fiche[0].select[2];
+        option2.innerText = fiche[0].select[2];
+        const option3 = document.createElement ('option');
+        option3.value = fiche[0].select[3];
+        option3.innerText = fiche[0].select[3];
+        const option4 = document.createElement ('option');
+        option4.value = fiche[0].select[4];
+        option4.innerText = fiche[0].select[4];
 
-    const select = document.createElement('select');
-    select.className = 'select';
+        select.appendChild(option0);
+        select.appendChild(option1);
+        select.appendChild(option2);
+        select.appendChild(option3);
+        select.appendChild(option4);
 
-    const option = document.createElement ('option');
-    option.value = "-- choisis ta réponse --";
-    const option1 = document.createElement ('option');
-    option1.value = fiche.select[0];
-    const option2 = document.createElement ('option');
-    option2.value = fiche.select[1];
-    const option3 = document.createElement ('option');
-    option3.value = fiche.select[2];
-    const option4 = document.createElement ('option');
-    option4.value = fiche.select[3];
+        const button = document.createElement('button');
+        button.className ='Go';
+        button.innerText ='Go!';
 
-    const button = document.createElement('button');
-    button.className ='Go';
-}*/
+        divSelectGo.appendChild(select);
+        divSelectGo.appendChild(button);
 
-  // Ouverture de la fenetre en Desktop
+        divRBox.appendChild(divClose);
+        divRBox.appendChild(p);
+        divRBox.appendChild(divSelectGo);
 
-  const jour = document.querySelectorAll(".jour-on");
-  for (let i = 0; i < jour.length; i++) {
-    jour[i].addEventListener("click", function () {
-      document.getElementById("overlay").style.display = "block";
-      document.querySelector(".pop").style.display = "flex";
-      document.getElementById("opacity").style.display = "block";
-    });
-  }
+        divPop.appendChild(imgElmt);
+        divPop.appendChild(divRBox);
 
-  // Fermeture de la fenetre en Desktop sans validation
+        sectionElmt.appendChild(divPop);
 
-  document.querySelector(".close-window")
+        return sectionElmt;
+
+    } else {
+        const sectionElmt = document.createElement('section');
+            sectionElmt.id= 'volet';
+
+            const divPop = document.createElement('div');
+            divPop.className='pop';
+
+            const imgElmt = document.createElement('img');
+            imgElmt.className = 'illustration';
+            imgElmt.src = fiche[0].img;
+            imgElmt.alt = "illustration";
+
+            const p = document.createElement('p');
+            p.innerHTML = fiche[0].question;
+            p.className = 'question';
+
+            const divRBox = document.createElement('div');
+            divRBox.className = 'right-box';
+
+            const select = document.createElement('select');
+            select.className = 'select';
+
+            const option0 = document.createElement ('option');
+            option0.value = "-- choisis ta réponse --";
+            option0.innerText = "-- choisis ta réponse --";
+            const option1 = document.createElement ('option');
+            option1.value = fiche[0].select[1];
+            option1.innerText = fiche[0].select[1];
+            const option2 = document.createElement ('option');
+            option2.value = fiche[0].select[2];
+            option2.innerText = fiche[0].select[2];
+            const option3 = document.createElement ('option');
+            option3.value = fiche[0].select[3];
+            option3.innerText = fiche[0].select[3];
+            const option4 = document.createElement ('option');
+            option4.value = fiche[0].select[4];
+            option4.innerText = fiche[0].select[4];
+
+            select.appendChild(option0);
+            select.appendChild(option1);
+            select.appendChild(option2);
+            select.appendChild(option3);
+            select.appendChild(option4);
+
+            const button = document.createElement('button');
+            button.className ='Go';
+            button.innerText ="GO!";
+
+            divRBox.appendChild(select);
+            divRBox.appendChild(button);
+
+            divPop.appendChild(imgElmt);
+            divPop.appendChild(p);
+            divPop.appendChild(divRBox);
+
+            sectionElmt.appendChild(divPop);
+
+            return sectionElmt;
+        
+    }
+}
+
+const insertAfter = (newNode, target) =>{
+    target.parentNode.insertBefore(newNode,target.nextElementSibling) 
+ }
+
+const jour = document.querySelectorAll(".jour-on");
+jour.forEach((element) => {
+element.addEventListener("click", (event) =>{
+    /*event.target.appendChild(createPopUp());*/
+    const contenu = document.querySelector('.contenu');
+    contenu.appendChild(createPopUp());
+
+    if (window.innerWidth > 768) {
+ 
+    document.getElementById("overlay").style.display = "block";
+    document.querySelector(".pop").style.display = "flex";
+    document.getElementById("opacity").style.display = "block";     
+
+        // Fermeture de la fenetre en Desktop sans validation
+
+    document.querySelector(".close-window")
     .addEventListener("click", function () {
-      document.getElementById("overlay").style.display = "none";
-      document.querySelector(".pop").style.display = "none";
-      document.getElementById("opacity").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+        document.querySelector(".pop").style.display = "none";
+        document.getElementById("opacity").style.display = "none";
     });
 
-  // Fermeture de la fenetre en Desktop après validation
+        //survol de Go par la souris
 
-  let gogo = document.querySelector(".Go");
-  let selectMobile = document.querySelector(".select");
+    let gogo = document.querySelector(".Go");
+    gogo.addEventListener("mouseover", function(event){
+        event.target.style.boxShadow = "2px 6px 12px #aaa";
+    }) 
+    gogo.addEventListener("mouseleave", function(event){
+        event.target.style.boxShadow = "none";
+    })
 
-  selectMobile.addEventListener("change", function () {
-    if (selectMobile.value !== "0") {
-      gogo.removeAttribute("disabled");
-      gogo.style.backgroundColor = "#41b56f";
-      gogo.style.color = "#fff";
-    } else {
-      gogo.setAttribute("disabled", "disabled");
-    }
-  });
+        // Fermeture de la fenetre en Desktop après validation
 
-  document.querySelector(".Go").addEventListener("click", function () {
-    if (document.querySelector("select").value !== "0") {
-      document.getElementById("overlay").style.display = "none";
-      document.querySelector(".pop").style.display = "none";
-      document.getElementById("opacity").style.display = "none";
-      document.querySelector(".jour-on").style.backgroundColor = "#41b56f";
-    }
-  });
-}
+    
+    let selectMobile = document.querySelector(".select");
 
-if (window.innerWidth < 768) {
-  // création des éléments de la popUp mobile.
+    selectMobile.addEventListener("change", function () {
+        if (selectMobile.value !== "0") {
+            gogo.removeAttribute("disabled");
+            gogo.style.backgroundColor = "#41b56f";
+            gogo.style.color = "#fff";
+        } else {
+            gogo.setAttribute("disabled", "disabled");
+            gogo.style.backgroundColor = "#eee";
+            gogo.style.color ="black";
+        }
+        });
 
-  /*function insertFiche(question) {
-    const sectionElmt = document.createElement('section');
-    sectionElmt.classList.add('#volet');
-
-    const divPop = document.createElement('div');
-    divPop.classList.add('pop');
-
-    const imgElmt = document.createElement('img');
-    imgElmt.classList.add('.illustration');
-    imgElmt.src = fiche.img;
-    imgElmt.alt = "illustration";
-
-    const p = document.createElement('p');
-    p.innerHTML = fiche.question;
-
-    const divRBox = document.createElement('div');
-    divRBox.className = 'right-box';
-
-    const select = document.createElement('select');
-    select.className = 'select';
-
-    const option = document.createElement ('option');
-    option.value = "-- choisis ta réponse --";
-    const option1 = document.createElement ('option');
-    option1.value = fiche.select[0];
-    const option2 = document.createElement ('option');
-    option2.value = fiche.select[1];
-    const option3 = document.createElement ('option');
-    option3.value = fiche.select[2];
-    const option4 = document.createElement ('option');
-    option4.value = fiche.select[3];
-
-    const button = document.createElement('button');
-    button.className ='Go';
-
-
-}*/
-
-  // Ouverture/fermeture du volet en mode Mobile
-
-  const jour = document.querySelectorAll(".jour-on");
-  for (let i = 0; i < jour.length; i++) {
-    jour[i].addEventListener("click", function () {
-      document.getElementById("volet").classList.toggle("open");
+    gogo.addEventListener("click", function () {
+        if (document.querySelector("select").value !== "0") {
+            document.getElementById("overlay").style.display = "none";
+            document.querySelector(".pop").style.display = "none";
+            document.getElementById("opacity").style.display = "none";
+            document.querySelector(".jour-on").style.backgroundColor = "#41b56f";
+        }
     });
-  }
+} else {
 
-  // activation du bouton Go après selection réponse.
+    insertAfter(createPopUp(),event.currentTarget)
+    
+    const jour = document.querySelectorAll(".jour-on");
+        
+            
+        document.getElementById("volet").classList.toggle("open");
+            
+        
 
-  let gogo = document.querySelector(".Go");
-  let selectMobile = document.querySelector(".select");
+    // activation du bouton Go après selection réponse.
 
-  selectMobile.addEventListener("change", function () {
-    if (selectMobile.value !== "0") {
-      gogo.removeAttribute("disabled");
-      gogo.style.backgroundColor = "#41b56f";
-      gogo.style.color = "#fff";
-      gogo.style.border = "none";
-    } else {
-      gogo.setAttribute("disabled", "disabled");
-    }
-  });
+        
+        
+        const select = document.querySelector('.select');
+        select.addEventListener("change", function () {
+            if (selectMobile.value !== "0") {
+                gogo.removeAttribute("disabled");
+                gogo.style.backgroundColor = "#41b56f";
+                gogo.style.color = "#fff";
+                gogo.style.border = "none";
+            } else {
+            gogo.setAttribute("disabled", "disabled");
+            }
+        });
 
-  // validation réponse et fermeture volet.
-
-  gogo.addEventListener("click", function () {
-    document.getElementById("volet").classList.toggle("open");
-    document.querySelector(".jour-on").style.backgroundColor = "#41b56f";
-  });
+    // validation réponse et fermeture volet.
+        const gogo = document.querySelector('.Go');
+        gogo.addEventListener("click", function () {
+            document.getElementById("volet").classList.toggle("open");
+            document.querySelector(".jour-on").style.backgroundColor = "#41b56f";
+        });
 }
+})
+})
