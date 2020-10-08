@@ -71,7 +71,7 @@
 }
 .error {
   color: var(--error);
-  font-weight: 800;
+  font-weight: 600;
   border-color: var(--error);
 }
 
@@ -81,20 +81,20 @@
   animation-name: anim-error;
   animation-duration: 0.8s;
   border-color: var(--error);
-  transform: translateY(-1.5rem);
+  transform: translateY(-2rem);
 }
 
 @keyframes anim-error {
   from {
     opacity: 0;
-    transform: translateY(-2.5rem);
+    transform: translateY(-2.8rem);
   }
   40% {
     opacity: 0;
   }
   to {
     opacity: 1;
-    transform: translateY(-1rem);
+    transform: translateY(-2rem);
   }
 }
 
@@ -190,5 +190,19 @@
     outline: none;
     border-color: var(--error);
     transform: translateY(-1rem);
+  }
+
+  @keyframes anim-error {
+    from {
+      opacity: 0;
+      transform: translateY(-2.8rem);
+    }
+    20% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-1rem);
+    }
   }
 }

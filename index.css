@@ -187,6 +187,7 @@ h4 {
 .input-email:not(:placeholder-shown) ~ .label-email {
   color: #909090;
   transform: translate(-0.3rem, -3.8rem) scale(0.8);
+  transition: all 0.2s linear;
 }
 
 .btn {
