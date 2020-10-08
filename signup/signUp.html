@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../index.css" />
-    <link rel="stylesheet" href="signup.css" />
     <link rel="stylesheet" href="../contact/contact.css" />
+    <link rel="stylesheet" href="signup.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inscription</title>
   </head>
 
-  <body>
+  <body class="app">
     <header class="main-header">
       <h2 class="main-title">
         <a class="nav-link" href="../index.html">En attendant noël</a>
@@ -103,6 +103,7 @@
       </section>
 
       <section class="scroller">
+        <p>Reglement</p>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
           totam at rem fuga deleniti consequatur fugit? Rerum, praesentium. Non
@@ -130,10 +131,14 @@
       </section>
 
       <section class="validation">
-        <input type="checkbox" id="accepte" name="accepte" />
-        <label for="accepte">J'accepte</label>
-        <label for="jouer"></label>
-        <input type="submit" id="jouer" value="Jouer" />
+        <div class="checkbox">
+          <input type="checkbox" id="accepte" name="accepte" />
+          <label for="accepte">J'accepte</label>
+        </div>
+        <div class="submit">
+          <label for="jouer"></label>
+          <input class="btn" type="submit" id="jouer" value="Jouer" />
+        </div>
       </section>
     </main>
 

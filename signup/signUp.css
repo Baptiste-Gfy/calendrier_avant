@@ -65,7 +65,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 2vh;
+  margin-top: 5vh;
   width: 70vw;
 }
 
@@ -81,7 +81,6 @@ main {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-
   font-size: 1.1rem;
   transition: all 0.2s ease-in-out;
 }
@@ -93,6 +92,7 @@ main {
   transform: translate(0, -1.6rem) scale(1);
   width: max-content;
   transition: all 0.2s linear;
+  z-index: 1;
 }
 
 .input-name:focus ~ .label-name,
@@ -123,8 +123,8 @@ main {
 
   .formulaire {
     max-width: 35vw;
-    height: 40vh;
-    margin: 1rem 2.5vw 0 0;
+    height: 45vh;
+    margin: 4rem 2.5vw 0 0;
     padding: 0 2rem;
   }
 
@@ -133,8 +133,8 @@ main {
   }
   .scroller {
     max-width: 35vw;
-    margin: 1rem 0 0 2.5vw;
-    height: 40vh;
+    margin: 4rem 0 0 2.5vw;
+    height: 45vh;
   }
 
   .form-regle {
@@ -147,7 +147,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 8vh;
+    margin-top: 4rem;
     width: 70vw;
   }
 
@@ -155,7 +155,7 @@ main {
     font-family: "raleway";
     cursor: text;
     position: relative;
-    transform: translate(0, -2.9rem) scale(1);
+    transform: translate(0, -3.3rem) scale(1);
     width: max-content;
     transition: all 0.2s linear;
   }
@@ -165,6 +165,6 @@ main {
   .input-name:not(:placeholder-shown) ~ .label-name,
   .input-email:not(:placeholder-shown) ~ .label-email {
     color: #909090;
-    transform: translate(-0.3rem, -4.2rem) scale(0.8);
+    transform: translate(-0.3rem, -4.5rem) scale(0.8);
   }
 }
