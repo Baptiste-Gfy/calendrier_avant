@@ -155,7 +155,7 @@ main {
     font-family: "raleway";
     cursor: text;
     position: relative;
-    transform: translate(0, -3.3rem) scale(1);
+    transform: translate(0, -8.5vh) scale(1);
     width: max-content;
     transition: all 0.2s linear;
   }
@@ -165,7 +165,7 @@ main {
   .input-name:not(:placeholder-shown) ~ .label-name,
   .input-email:not(:placeholder-shown) ~ .label-email {
     color: #909090;
-    transform: translate(-0.3rem, -4.5rem) scale(0.8);
+    transform: translate(-0.3rem, -10.5vh) scale(0.8);
   }
 
   .input {
