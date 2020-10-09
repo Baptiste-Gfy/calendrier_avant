@@ -3,19 +3,20 @@
 /*------links to index------*/
 
 /*-----------body-----------*/
+h1 {
+  margin: 0;
+}
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
 .title {
-  margin-top: 8vh;
+  margin: 6vh 0 0 0;
+  padding-top: 3vh;
   text-align: center;
-}
-
-section {
-  margin: 0 0 2vh 0;
 }
 
 /*formulaire*/
@@ -23,37 +24,152 @@ section {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  justify-content: space-around;
   height: 20vh;
-
-  margin: 2rem;
+  width: 70vw;
+  margin: 1rem 0;
+  padding: 2rem;
+  border: solid #fba6a6 2px;
+  background-color: #eee;
+  border-radius: 5px;
 }
 
 .cadre-form {
-  height: 40vh;
-  width: 80vw;
+  height: 100%;
+  width: 100%;
   list-style: none;
-  background-color: #eee;
-  border-radius: 5px;
+  margin-top: 0;
   margin: 0;
-  padding: 2rem;
 }
-
+/* règlement*/
 .scroller {
   background-color: #eee;
-  height: 20vh;
-  width: 80vw;
-  margin: 0.5vh 0.5vw 0 0.5vw;
-  border: solid salmon 2px;
+  height: 30vh;
+  width: 70vw;
+  border: solid #fba6a6 2px;
   border-radius: 5px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
   padding: 0 2rem;
 }
+
+.form-regle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+}
+
 .validation {
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5vh;
+  width: 70vw;
+}
+
+.checkbox {
+  padding: 2% 0;
+}
+
+.btn {
+  height: 5vh;
+  width: 20vw;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.label-placeholder {
+  font-family: "raleway";
+  cursor: text;
+  position: relative;
+  transform: translate(0, -1.6rem) scale(1);
+  width: max-content;
+  transition: all 0.2s linear;
+  z-index: 1;
+}
+
+.input-name:focus ~ .label-name,
+.input-email:focus ~ .label-email,
+.input-name:not(:placeholder-shown) ~ .label-name,
+.input-email:not(:placeholder-shown) ~ .label-email {
+  color: #909090;
+  transform: translate(-0.3rem, -2.8rem) scale(0.8);
 }
 
 /*----------footer----------*/
 
 /*------links to index------*/
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 2.5vw;
+  }
+  .title {
+    width: 100vw;
+    margin-top: 10vh;
+  }
+
+  .formulaire {
+    max-width: 35vw;
+    height: 45vh;
+    margin: 4rem 2.5vw 0 0;
+    padding: 0 2rem;
+  }
+
+  .cadre-form {
+    padding: 2rem 0;
+  }
+  .scroller {
+    max-width: 35vw;
+    margin: 4rem 0 0 2.5vw;
+    height: 45vh;
+  }
+
+  .form-regle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 8vh;
+  }
+
+  .validation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4rem;
+    width: 50vw;
+  }
+
+  .label-placeholder {
+    font-family: "raleway";
+    cursor: text;
+    position: relative;
+    transform: translate(0, -3.3rem) scale(1);
+    width: max-content;
+    transition: all 0.2s linear;
+  }
+
+  .input-name:focus ~ .label-name,
+  .input-email:focus ~ .label-email,
+  .input-name:not(:placeholder-shown) ~ .label-name,
+  .input-email:not(:placeholder-shown) ~ .label-email {
+    color: #909090;
+    transform: translate(-0.3rem, -4.5rem) scale(0.8);
+  }
+
+  .input {
+    max-width: 100%;
+    margin-top: 0.5rem;
+  }
+}

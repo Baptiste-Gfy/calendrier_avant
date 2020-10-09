@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //I checked if all the fields of the form are filled then I enable the submit button.
   [name, email, message].forEach((element) => {
-    element.addEventListener("change", (e) => {
+    element.addEventListener("change", () => {
       const name = document.getElementById("name"),
         email = document.getElementById("email"),
         message = document.getElementById("message"),

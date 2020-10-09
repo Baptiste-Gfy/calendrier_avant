@@ -1,104 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="contact.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="contact.css" />
     <title>En attendant noël</title>
-</head>
+  </head>
 
-<body class="app">
+  <body class="app">
     <header class="main-header">
-        <h2 class="main-title"><a class="nav-link" href="/index.html">En attendant noël</a></h2>
-        <div class="burger">
-            <span class="slice-burger"></span>
-            <span class="slice-burger"></span>
-            <span class="slice-burger"></span>
-            <span class="slice-burger"></span>
-        </div>
-        <nav class="main-nav-header">
-            <ul class="content-items-nav-header">
-                <li class="items-nav-header">
-                    <a href="../signup/signUp.html" class="nav-link">Inscription</a>
-                </li>
-                <li class="items-nav-header">
-                    <a href="/calendrier/calendrier.html" class="nav-link">Calendrier</a>
-                </li>
-                <li class="items-nav-header">
-                    <a href="/contact/contact.html" class="nav-link">Contactez-nous</a>
-                </li>
-            </ul>
-        </nav>
+      <h2 class="main-title">
+        <a class="nav-link" href="/index.html">En attendant noël</a>
+      </h2>
+      <div class="burger">
+        <span class="slice-burger"></span>
+        <span class="slice-burger"></span>
+        <span class="slice-burger"></span>
+        <span class="slice-burger"></span>
+      </div>
+      <nav class="main-nav-header">
+        <ul class="content-items-nav-header">
+          <li class="items-nav-header">
+            <a href="../signup/signUp.html" class="nav-link">Inscription</a>
+          </li>
+          <li class="items-nav-header">
+            <a href="/calendrier/calendrier.html" class="nav-link"
+              >Calendrier</a
+            >
+          </li>
+          <li class="items-nav-header">
+            <a href="/contact/contact.html" class="nav-link">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="main-contact">
-        <h1>Qui sommes nous ?</h1>
-        <div class="content-profile">
-            <figure class="profile">
-                <img lazy class="profile-photo" src="../asset/profile/florian(1).jpg" alt="Photo de profile Florian">
-                <address class="profile-info">
-                    Florian Milcendeau
-                    <a title="Profile GitHub" href="https://github.com/FlorianMilcendeau" target="blank"><img
-                            src="../asset/GitHub-Mark/PNG/GitHub-Mark-32px.png" alt="Logo GitHub"></a>
-                </address>
-            </figure>
-            <figure class="profile">
-                <img lazy class="profile-photo" src="../asset/profile/baptiste(2).jpg" alt="Photo de profile Baptiste">
-                <address class="profile-info">
-                    Baptiste Geffroy
-                    <a title="Profile GitHub" href="https://github.com/Baptiste-Gfy" target="blank"><img
-                            src="../asset/GitHub-Mark/PNG/GitHub-Mark-32px.png" alt="Logo GitHub"></a>
-                </address>
-            </figure>
-            <figure class="profile">
-                <img lazy class="profile-photo" src="../asset/profile/benoit.jpg" alt="Photo de profile Benoit">
-                <address class="profile-info">
-                    Benoit Le Bourdonnec
-                    <a title="Profile GitHub" href="https://github.com/Benoit2109" target="blank"><img
-                            src="../asset/GitHub-Mark/PNG/GitHub-Mark-32px.png" alt="Logo GitHub"></a>
-                </address>
-            </figure>
+      <h1>Qui sommes nous ?</h1>
+      <div class="content-profile">
+        <figure class="profile">
+          <img
+            lazy
+            class="profile-photo"
+            src="../asset/profile/florian(1).jpg"
+            alt="Photo de profile Florian"
+          />
+          <address class="profile-info">
+            Florian Milcendeau
+            <a
+              title="Profile GitHub"
+              href="https://github.com/FlorianMilcendeau"
+              target="blank"
+              ><img
+                src="../asset/GitHub-Mark/PNG/GitHub-Mark-32px.png"
+                alt="Logo GitHub"
+            /></a>
+          </address>
+        </figure>
+        <figure class="profile">
+          <img
+            lazy
+            class="profile-photo"
+            src="../asset/profile/baptiste(2).jpg"
+            alt="Photo de profile Baptiste"
+          />
+          <address class="profile-info">
+            Baptiste Geffroy
+            <a
+              title="Profile GitHub"
+              href="https://github.com/Baptiste-Gfy"
+              target="blank"
+              ><img
+                src="../asset/GitHub-Mark/PNG/GitHub-Mark-32px.png"
+                alt="Logo GitHub"
+            /></a>
+          </address>
+        </figure>
+        <figure class="profile">
+          <img
+            lazy
+            class="profile-photo"
+            src="../asset/profile/benoit.jpg"
+            alt="Photo de profile Benoit"
+          />
+          <address class="profile-info">
+            Benoit Le Bourdonnec
+            <a
+              title="Profile GitHub"
+              href="https://github.com/Benoit2109"
+              target="blank"
+              ><img
+                src="../asset/GitHub-Mark/PNG/GitHub-Mark-32px.png"
+                alt="Logo GitHub"
+            /></a>
+          </address>
+        </figure>
+      </div>
+      <div class="container-flex">
+        <p class="team-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+          accumsan laoreet lorem sit amet euismod. Aliquam mollis malesuada
+          condimentum. Aliquam facilisis dui sit amet felis pretium, malesuada
+          tincidunt eros sollicitudin. Quisque neque metus, accumsan ornare
+          tortor eget, tristique ultrices neque.
+        </p>
+        <hr class="separate" />
+        <div class="container-form">
+          <form id="contact" class="form-contact" action="#" method="post">
+            <h2>Contact :</h2>
+            <input
+              class="input input-name"
+              name="name"
+              id="name"
+              type="text"
+              placeholder=" "
+            />
+            <label class="label-placeholder label-name" for="name">Nom</label
+            ><span class="error error-name">Nom invalide</span>
+            <input
+              class="input input-email"
+              id="email"
+              name="email"
+              type="email"
+              placeholder=" "
+            />
+            <label class="label-placeholder label-email" for="email"
+              >E-mail</label
+            >
+            <span class="error error-email">E-mail invalide</span>
+            <textarea
+              class="message-contact"
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Message..."
+            ></textarea>
+            <input
+              disabled
+              id="send-form-contact"
+              class="btn btn-disabled"
+              type="submit"
+            />
+          </form>
         </div>
-        <div class="container-flex">
-
-            <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan
-                laoreet
-                lorem sit amet euismod.
-                Aliquam mollis malesuada condimentum. Aliquam facilisis dui sit amet felis pretium, malesuada tincidunt
-                eros
-                sollicitudin. Quisque neque metus, accumsan ornare tortor eget, tristique ultrices neque.
-            </p>
-            <hr class="separate">
-            <div class="container-form">
-
-                <form id="contact" class="form-contact" action="#" method="post">
-                    <h2>
-                        Contact :
-                    </h2>
-                    <input class="input input-name" name="name" id="name" type="text" placeholder=" ">
-                    <label class="label-placeholder label-name" for="name">Nom</label><span class="error error-name">Nom
-                        invalide</span>
-                    <input class="input input-email" id="email" name="email" type="email" placeholder=" ">
-                    <label class="label-placeholder label-email" for="email">E-mail</label>
-                    <span class="error error-email">E-mail invalide</span>
-                    <textarea class="message-contact" name="message" id="message" cols="30" rows="10"
-                        placeholder="Message..."></textarea>
-                    <input disabled id="send-form-contact" class="btn btn-disabled" type="submit">
-                </form>
-            </div>
-        </div>
+      </div>
     </main>
     <footer>
-        <ul class="content-items-footer">
-            <li class="items-footer"><a class="nav-link" href="/contact/contact.html">Qui sommes nous ?</a></li>
-            <li class="items-footer"><a class="nav-link" href="/contact/contact.html#contact">Contactez-nous</a></li>
-        </ul>
-        <a title="site Wild Code School" href="https://www.wildcodeschool.com/fr-FR" target="blank"><img
-                class="logo-WCS" src="../asset/logo-WSC.png" alt="logo Wild Code School"></a>
+      <ul class="content-items-footer">
+        <li class="items-footer">
+          <a class="nav-link" href="/contact/contact.html">Qui sommes nous ?</a>
+        </li>
+        <li class="items-footer">
+          <a class="nav-link" href="/contact/contact.html#contact"
+            >Contactez-nous</a
+          >
+        </li>
+      </ul>
+      <a
+        title="site Wild Code School"
+        href="https://www.wildcodeschool.com/fr-FR"
+        target="blank"
+        ><img
+          class="logo-WCS"
+          src="../asset/logo-WSC.png"
+          alt="logo Wild Code School"
+      /></a>
     </footer>
     <script src="../index.js"></script>
     <script src="contact.js"></script>
-</body>
-
+  </body>
 </html>
