@@ -22,7 +22,7 @@ h1 {
     display:none;
     margin:0;
     padding:0;
-    height:70vh;
+    height:60vh;
     width:auto;
     transition:all 1s ease-in-out;
 }
@@ -86,7 +86,7 @@ h1 {
 
 
 .pop{
-    height:70vh;
+    height:60vh;
     width:auto;
     margin:0;
     padding:0vw;
@@ -96,6 +96,7 @@ h1 {
     border-bottom-right-radius:5px;
     display:flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .question{
@@ -108,7 +109,8 @@ h1 {
     margin:3vh;
     border-radius:5px;
     object-fit: scale-down;
-    max-height:200px;    
+    max-height:200px;
+    max-width:200px;    
 }
 .right-box{
     margin-top: 2vh;
@@ -133,7 +135,6 @@ h1 {
     color:black;
     background-color:#eee;
     transition:all 0.2s ease-in-out;
-    
     max-width:45px;
     Margin-left:5vw;
 }
@@ -285,7 +286,8 @@ h1 {
         flex-direction:row;
         justify-content:space-around;
         padding:1rem;
-        padding:8vh 0 0 0;   
+        padding:8vh 0 0 0;
+        align-items:start;   
     }
 
     .illustration{
@@ -305,8 +307,8 @@ h1 {
 
     .select{
         min-height:5vh;
-        min-width: 25vw;
-        max-width:20vw;
+        min-width: 20vw;
+        max-width:25vw;
         border-radius:5px;
         color:white;
         background-color:#383838;
@@ -322,10 +324,7 @@ h1 {
         transition:all 0.2s ease-in-out;
         border:none;
         margin-left:1vw;
-    }
-
-    .Go:hover{
-        box-shadow:2px 6px 12px #aaa;
+        box-shadow:none;
     }
 
     .Go:focus{
