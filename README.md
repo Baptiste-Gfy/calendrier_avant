@@ -21,7 +21,7 @@
  - faire un site type blog
  - faire une interface responsive ( mobile-first to desktop )
  - intéraction entre page
- - utilisé l'ensemble des notion vue au cours de ce premier mois de formation
+ - utiliser l'ensemble des notion vue au cours de ce premier mois de formation
  
 
 #### Techno utilisée : Html / Css / Js
